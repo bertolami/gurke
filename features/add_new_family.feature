@@ -5,5 +5,5 @@ Feature: Add a family
 
   Scenario: Add Schmetterlingsblütler
     Given I am logged in as admin user
-    When I create a "schwachzehrend" "Schmetterlingsblütler"
-    Then the newly created family "Schmetterlingsblütler" is available for use
+    When I create a "schwachzehrend" "Baum"
+    Then the newly created family "Baum" is available for use

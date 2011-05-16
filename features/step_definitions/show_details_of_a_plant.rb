@@ -14,7 +14,7 @@ Then /^The family name is "([^"]*)"$/ do |family_name|
 end
 
 Then /^the energy need is "([^"]*)"$/ do |energy|
-  energy.should == @plant.energy
+    energy.should == @plant.energy
 end
 
  
