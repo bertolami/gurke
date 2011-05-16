@@ -1,0 +1,382 @@
+  [1m[36mSQL (0.4ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mSQL (0.1ms)[0m   SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+  [1m[36mSQL (0.1ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[36mSQL (0.8ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mPlant Load (0.1ms)[0m  SELECT "plants".* FROM "plants" WHERE "plants"."name" = 'Zwiebel' LIMIT 1
+  [1m[36mPlant Load (0.1ms)[0m  [1mSELECT "plants".* FROM "plants" WHERE "plants"."name" = 'Kopfsalat' LIMIT 1[0m
+  [1m[35mPlant Load (0.1ms)[0m  SELECT "plants".* FROM "plants" WHERE "plants"."name" = 'Randen' LIMIT 1
+  [1m[36mSQL (0.2ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mPlant Load (0.1ms)[0m  SELECT "plants".* FROM "plants" WHERE "plants"."id" = 980190962 LIMIT 1
+  [1m[36mSQL (0.0ms)[0m  [1mSELECT COUNT(*) FROM "plants"[0m
+  Processing by PlantsController#create as HTML
+  Parameters: {"plant"=>{"name"=>nil, "created_at"=>Mon, 16 May 2011 12:23:38 UTC +00:00, "updated_at"=>Mon, 16 May 2011 12:23:38 UTC +00:00, "id"=>980190962}}
+WARNING: Can't mass-assign protected attributes: id
+  [1m[35mAREL (0.2ms)[0m  INSERT INTO "plants" ("name", "created_at", "updated_at") VALUES (NULL, '2011-05-16 12:23:38.000000', '2011-05-16 12:23:38.000000')
+Redirected to http://test.host/plants/980190963
+Completed 302 Found in 3ms
+  [1m[36mSQL (0.1ms)[0m  [1mSELECT COUNT(*) FROM "plants"[0m
+  [1m[35mPlant Load (0.0ms)[0m  SELECT "plants".* FROM "plants" WHERE "plants"."id" = 980190962 LIMIT 1
+  [1m[36mSQL (0.1ms)[0m  [1mSELECT COUNT(*) FROM "plants"[0m
+  Processing by PlantsController#destroy as HTML
+  Parameters: {"id"=>"980190962"}
+  [1m[35mPlant Load (0.1ms)[0m  SELECT "plants".* FROM "plants" WHERE "plants"."id" = 980190962 LIMIT 1
+  [1m[36mAREL (0.0ms)[0m  [1mDELETE FROM "plants" WHERE "plants"."id" = 980190962[0m
+Redirected to http://test.host/plants
+Completed 302 Found in 2ms
+  [1m[35mSQL (0.1ms)[0m  SELECT COUNT(*) FROM "plants"
+  [1m[36mPlant Load (0.1ms)[0m  [1mSELECT "plants".* FROM "plants" WHERE "plants"."id" = 980190962 LIMIT 1[0m
+  Processing by PlantsController#edit as HTML
+  Parameters: {"id"=>"980190962"}
+  [1m[35mPlant Load (0.1ms)[0m  SELECT "plants".* FROM "plants" WHERE "plants"."id" = 980190962 LIMIT 1
+Rendered plants/_form.html.erb (4.1ms)
+Completed 200 OK in 9ms (Views: 8.8ms | ActiveRecord: 1.8ms)
+  [1m[36mPlant Load (0.1ms)[0m  [1mSELECT "plants".* FROM "plants" WHERE "plants"."id" = 980190962 LIMIT 1[0m
+  Processing by PlantsController#index as HTML
+  [1m[35mPlant Load (0.1ms)[0m  SELECT "plants".* FROM "plants"
+Completed 200 OK in 6ms (Views: 5.3ms | ActiveRecord: 0.2ms)
+  [1m[36mPlant Load (0.1ms)[0m  [1mSELECT "plants".* FROM "plants" WHERE "plants"."id" = 980190962 LIMIT 1[0m
+  Processing by PlantsController#new as HTML
+Rendered plants/_form.html.erb (2.0ms)
+Completed 200 OK in 44ms (Views: 43.5ms | ActiveRecord: 0.1ms)
+  [1m[35mPlant Load (0.1ms)[0m  SELECT "plants".* FROM "plants" WHERE "plants"."id" = 980190962 LIMIT 1
+  Processing by PlantsController#show as HTML
+  Parameters: {"id"=>"980190962"}
+  [1m[36mPlant Load (0.1ms)[0m  [1mSELECT "plants".* FROM "plants" WHERE "plants"."id" = 980190962 LIMIT 1[0m
+Completed 200 OK in 4ms (Views: 3.0ms | ActiveRecord: 0.3ms)
+  [1m[35mPlant Load (0.1ms)[0m  SELECT "plants".* FROM "plants" WHERE "plants"."id" = 980190962 LIMIT 1
+  Processing by PlantsController#update as HTML
+  Parameters: {"plant"=>{"name"=>nil, "created_at"=>Mon, 16 May 2011 12:23:38 UTC +00:00, "updated_at"=>Mon, 16 May 2011 12:23:38 UTC +00:00, "id"=>980190962}, "id"=>"980190962"}
+  [1m[36mPlant Load (0.1ms)[0m  [1mSELECT "plants".* FROM "plants" WHERE "plants"."id" = 980190962 LIMIT 1[0m
+WARNING: Can't mass-assign protected attributes: id
+Redirected to http://test.host/plants/980190962
+Completed 302 Found in 2ms
+  [1m[36mSQL (0.2ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mPlant Load (0.1ms)[0m  SELECT "plants".* FROM "plants" WHERE "plants"."name" = 'Zwiebel' LIMIT 1
+  [1m[36mPlant Load (0.1ms)[0m  [1mSELECT "plants".* FROM "plants" WHERE "plants"."name" = 'Kopfsalat' LIMIT 1[0m
+  [1m[35mPlant Load (0.1ms)[0m  SELECT "plants".* FROM "plants" WHERE "plants"."name" = 'Randen' LIMIT 1
+  [1m[36mSQL (0.4ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mPlant Load (0.2ms)[0m  SELECT "plants".* FROM "plants" WHERE "plants"."name" = 'Zwiebel' LIMIT 1
+  [1m[36mPlant Load (0.1ms)[0m  [1mSELECT "plants".* FROM "plants" WHERE "plants"."name" = 'Kopfsalat' LIMIT 1[0m
+  [1m[35mPlant Load (0.1ms)[0m  SELECT "plants".* FROM "plants" WHERE "plants"."name" = 'Randen' LIMIT 1
+  [1m[36mSQL (0.1ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mPlant Load (0.1ms)[0m  SELECT "plants".* FROM "plants" WHERE "plants"."name" = 'Zwiebel' LIMIT 1
+  [1m[36mPlant Load (0.1ms)[0m  [1mSELECT "plants".* FROM "plants" WHERE "plants"."name" = 'Kopfsalat' LIMIT 1[0m
+  [1m[35mPlant Load (0.1ms)[0m  SELECT "plants".* FROM "plants" WHERE "plants"."name" = 'Randen' LIMIT 1
+  [1m[36mSQL (0.3ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mPlant Load (0.1ms)[0m  SELECT "plants".* FROM "plants" WHERE "plants"."name" = 'Kopfsalat' LIMIT 1
+  [1m[36mPlant Load (0.1ms)[0m  [1mSELECT "plants".* FROM "plants" WHERE "plants"."name" = 'Zwiebel' LIMIT 1[0m
+  [1m[35mPlant Load (0.1ms)[0m  SELECT "plants".* FROM "plants" WHERE "plants"."name" = 'Randen' LIMIT 1
+  [1m[36mSQL (0.2ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mPlant Load (0.1ms)[0m  SELECT "plants".* FROM "plants" WHERE "plants"."name" = 'Kopfsalat' LIMIT 1
+  [1m[36mPlant Load (0.1ms)[0m  [1mSELECT "plants".* FROM "plants" WHERE "plants"."name" = 'Zwiebel' LIMIT 1[0m
+  [1m[35mPlant Load (0.1ms)[0m  SELECT "plants".* FROM "plants" WHERE "plants"."name" = 'Randen' LIMIT 1
+  [1m[36mSQL (0.2ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mPlant Load (0.1ms)[0m  SELECT "plants".* FROM "plants" WHERE "plants"."name" = 'Kopfsalat' LIMIT 1
+  [1m[36mPlant Load (0.2ms)[0m  [1mSELECT "plants".* FROM "plants" WHERE "plants"."name" = 'Zwiebel' LIMIT 1[0m
+  [1m[35mPlant Load (0.1ms)[0m  SELECT "plants".* FROM "plants" WHERE "plants"."name" = 'Randen' LIMIT 1
+  [1m[36mSQL (0.3ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mSQL (0.1ms)[0m   SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+  [1m[36mSQL (0.2ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mSQL (0.2ms)[0m   SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+  [1m[36mSQL (0.5ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mSQL (0.1ms)[0m   SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+  [1m[36mSQL (0.2ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mSQL (0.0ms)[0m   SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+  [1m[36mSQL (0.1ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mSQL (0.1ms)[0m   SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+  [1m[36mSQL (0.2ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mSQL (0.1ms)[0m   SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+  [1m[36mSQL (0.2ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mSQL (0.1ms)[0m   SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+  [1m[36mSQL (0.4ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mPlant Load (0.2ms)[0m  SELECT "plants".* FROM "plants" WHERE "plants"."id" = 65661742 LIMIT 1
+  [1m[36mSQL (0.1ms)[0m  [1mSELECT COUNT(*) FROM "plants"[0m
+  Processing by PlantsController#create as HTML
+  Parameters: {"plant"=>{"name"=>"Zwiebel", "created_at"=>Mon, 16 May 2011 12:49:04 UTC +00:00, "updated_at"=>Mon, 16 May 2011 12:49:04 UTC +00:00, "id"=>65661742}}
+WARNING: Can't mass-assign protected attributes: id
+  [1m[35mAREL (0.2ms)[0m  INSERT INTO "plants" ("updated_at", "created_at", "name") VALUES ('2011-05-16 12:49:04.000000', '2011-05-16 12:49:04.000000', 'Zwiebel')
+Redirected to http://test.host/plants/846292693
+Completed 302 Found in 4ms
+  [1m[36mSQL (0.1ms)[0m  [1mSELECT COUNT(*) FROM "plants"[0m
+  [1m[35mPlant Load (0.2ms)[0m  SELECT "plants".* FROM "plants" WHERE "plants"."id" = 65661742 LIMIT 1
+  [1m[36mSQL (0.1ms)[0m  [1mSELECT COUNT(*) FROM "plants"[0m
+  Processing by PlantsController#destroy as HTML
+  Parameters: {"id"=>"65661742"}
+  [1m[35mPlant Load (0.1ms)[0m  SELECT "plants".* FROM "plants" WHERE "plants"."id" = 65661742 LIMIT 1
+  [1m[36mAREL (0.1ms)[0m  [1mDELETE FROM "plants" WHERE "plants"."id" = 65661742[0m
+Redirected to http://test.host/plants
+Completed 302 Found in 2ms
+  [1m[35mSQL (0.1ms)[0m  SELECT COUNT(*) FROM "plants"
+  [1m[36mPlant Load (0.1ms)[0m  [1mSELECT "plants".* FROM "plants" WHERE "plants"."id" = 65661742 LIMIT 1[0m
+  Processing by PlantsController#edit as HTML
+  Parameters: {"id"=>"65661742"}
+  [1m[35mPlant Load (0.1ms)[0m  SELECT "plants".* FROM "plants" WHERE "plants"."id" = 65661742 LIMIT 1
+Rendered plants/_form.html.erb (42.9ms)
+Completed 200 OK in 49ms (Views: 48.7ms | ActiveRecord: 2.3ms)
+  [1m[36mPlant Load (0.2ms)[0m  [1mSELECT "plants".* FROM "plants" WHERE "plants"."id" = 65661742 LIMIT 1[0m
+  Processing by PlantsController#index as HTML
+  [1m[35mPlant Load (0.2ms)[0m  SELECT "plants".* FROM "plants"
+Completed 200 OK in 10ms (Views: 9.0ms | ActiveRecord: 0.3ms)
+  [1m[36mPlant Load (0.2ms)[0m  [1mSELECT "plants".* FROM "plants" WHERE "plants"."id" = 65661742 LIMIT 1[0m
+  Processing by PlantsController#new as HTML
+Rendered plants/_form.html.erb (1.6ms)
+Completed 200 OK in 4ms (Views: 4.0ms | ActiveRecord: 0.2ms)
+  [1m[35mPlant Load (0.1ms)[0m  SELECT "plants".* FROM "plants" WHERE "plants"."id" = 65661742 LIMIT 1
+  Processing by PlantsController#show as HTML
+  Parameters: {"id"=>"65661742"}
+  [1m[36mPlant Load (0.1ms)[0m  [1mSELECT "plants".* FROM "plants" WHERE "plants"."id" = 65661742 LIMIT 1[0m
+Completed 200 OK in 4ms (Views: 2.7ms | ActiveRecord: 0.2ms)
+  [1m[35mPlant Load (0.1ms)[0m  SELECT "plants".* FROM "plants" WHERE "plants"."id" = 65661742 LIMIT 1
+  Processing by PlantsController#update as HTML
+  Parameters: {"plant"=>{"name"=>"Zwiebel", "created_at"=>Mon, 16 May 2011 12:49:04 UTC +00:00, "updated_at"=>Mon, 16 May 2011 12:49:04 UTC +00:00, "id"=>65661742}, "id"=>"65661742"}
+  [1m[36mPlant Load (0.1ms)[0m  [1mSELECT "plants".* FROM "plants" WHERE "plants"."id" = 65661742 LIMIT 1[0m
+WARNING: Can't mass-assign protected attributes: id
+Redirected to http://test.host/plants/65661742
+Completed 302 Found in 2ms
+  [1m[35mSQL (0.0ms)[0m   SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+  [1m[36mSQL (0.1ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mSQL (0.2ms)[0m   SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+  [1m[36mSQL (0.1ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mSQL (0.3ms)[0m   SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+  [1m[36mSQL (0.1ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mSQL (0.3ms)[0m   SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+  [1m[36mSQL (0.2ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mSQL (0.2ms)[0m   SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+  [1m[36mSQL (0.2ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mSQL (0.1ms)[0m   SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+  [1m[36mSQL (0.1ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mSQL (0.1ms)[0m   SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+  [1m[36mSQL (0.1ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[36mSQL (0.2ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mFamily Load (0.1ms)[0m  SELECT "families".* FROM "families" WHERE "families"."id" = 980190962 LIMIT 1
+  [1m[36mSQL (0.1ms)[0m  [1mSELECT COUNT(*) FROM "families"[0m
+  Processing by FamiliesController#create as HTML
+  Parameters: {"family"=>{"name"=>nil, "created_at"=>Mon, 16 May 2011 12:50:27 UTC +00:00, "updated_at"=>Mon, 16 May 2011 12:50:27 UTC +00:00, "energy"=>nil, "id"=>980190962}}
+WARNING: Can't mass-assign protected attributes: id
+  [1m[35mAREL (0.2ms)[0m  INSERT INTO "families" ("created_at", "updated_at", "energy", "name") VALUES ('2011-05-16 12:50:27.000000', '2011-05-16 12:50:27.000000', NULL, NULL)
+Redirected to http://test.host/families/980190963
+Completed 302 Found in 4ms
+  [1m[36mSQL (0.1ms)[0m  [1mSELECT COUNT(*) FROM "families"[0m
+  [1m[35mFamily Load (0.2ms)[0m  SELECT "families".* FROM "families" WHERE "families"."id" = 980190962 LIMIT 1
+  [1m[36mSQL (0.1ms)[0m  [1mSELECT COUNT(*) FROM "families"[0m
+  Processing by FamiliesController#destroy as HTML
+  Parameters: {"id"=>"980190962"}
+  [1m[35mFamily Load (0.1ms)[0m  SELECT "families".* FROM "families" WHERE "families"."id" = 980190962 LIMIT 1
+  [1m[36mAREL (0.1ms)[0m  [1mDELETE FROM "families" WHERE "families"."id" = 980190962[0m
+Redirected to http://test.host/families
+Completed 302 Found in 2ms
+  [1m[35mSQL (0.1ms)[0m  SELECT COUNT(*) FROM "families"
+  [1m[36mFamily Load (0.5ms)[0m  [1mSELECT "families".* FROM "families" WHERE "families"."id" = 980190962 LIMIT 1[0m
+  Processing by FamiliesController#edit as HTML
+  Parameters: {"id"=>"980190962"}
+  [1m[35mFamily Load (0.1ms)[0m  SELECT "families".* FROM "families" WHERE "families"."id" = 980190962 LIMIT 1
+Rendered families/_form.html.erb (44.8ms)
+Completed 200 OK in 51ms (Views: 49.9ms | ActiveRecord: 2.7ms)
+  [1m[36mFamily Load (0.2ms)[0m  [1mSELECT "families".* FROM "families" WHERE "families"."id" = 980190962 LIMIT 1[0m
+  Processing by FamiliesController#index as HTML
+  [1m[35mFamily Load (0.1ms)[0m  SELECT "families".* FROM "families"
+Completed 200 OK in 7ms (Views: 5.9ms | ActiveRecord: 0.2ms)
+  [1m[36mFamily Load (0.2ms)[0m  [1mSELECT "families".* FROM "families" WHERE "families"."id" = 980190962 LIMIT 1[0m
+  Processing by FamiliesController#new as HTML
+Rendered families/_form.html.erb (2.4ms)
+Completed 200 OK in 6ms (Views: 5.2ms | ActiveRecord: 0.2ms)
+  [1m[35mFamily Load (0.1ms)[0m  SELECT "families".* FROM "families" WHERE "families"."id" = 980190962 LIMIT 1
+  Processing by FamiliesController#show as HTML
+  Parameters: {"id"=>"980190962"}
+  [1m[36mFamily Load (0.1ms)[0m  [1mSELECT "families".* FROM "families" WHERE "families"."id" = 980190962 LIMIT 1[0m
+Completed 200 OK in 4ms (Views: 3.5ms | ActiveRecord: 0.2ms)
+  [1m[35mFamily Load (0.1ms)[0m  SELECT "families".* FROM "families" WHERE "families"."id" = 980190962 LIMIT 1
+  Processing by FamiliesController#update as HTML
+  Parameters: {"id"=>"980190962", "family"=>{"name"=>nil, "created_at"=>Mon, 16 May 2011 12:50:27 UTC +00:00, "updated_at"=>Mon, 16 May 2011 12:50:27 UTC +00:00, "energy"=>nil, "id"=>980190962}}
+  [1m[36mFamily Load (0.1ms)[0m  [1mSELECT "families".* FROM "families" WHERE "families"."id" = 980190962 LIMIT 1[0m
+WARNING: Can't mass-assign protected attributes: id
+Redirected to http://test.host/families/980190962
+Completed 302 Found in 2ms
+  [1m[35mPlant Load (0.1ms)[0m  SELECT "plants".* FROM "plants" WHERE "plants"."id" = 65661742 LIMIT 1
+  [1m[36mSQL (0.1ms)[0m  [1mSELECT COUNT(*) FROM "plants"[0m
+  Processing by PlantsController#create as HTML
+  Parameters: {"plant"=>{"name"=>"Zwiebel", "created_at"=>Mon, 16 May 2011 12:50:27 UTC +00:00, "updated_at"=>Mon, 16 May 2011 12:50:27 UTC +00:00, "id"=>65661742}}
+WARNING: Can't mass-assign protected attributes: id
+  [1m[35mAREL (0.2ms)[0m  INSERT INTO "plants" ("name", "updated_at", "created_at") VALUES ('Zwiebel', '2011-05-16 12:50:27.000000', '2011-05-16 12:50:27.000000')
+Redirected to http://test.host/plants/846292693
+Completed 302 Found in 3ms
+  [1m[36mSQL (0.1ms)[0m  [1mSELECT COUNT(*) FROM "plants"[0m
+  [1m[35mPlant Load (0.1ms)[0m  SELECT "plants".* FROM "plants" WHERE "plants"."id" = 65661742 LIMIT 1
+  [1m[36mSQL (0.0ms)[0m  [1mSELECT COUNT(*) FROM "plants"[0m
+  Processing by PlantsController#destroy as HTML
+  Parameters: {"id"=>"65661742"}
+  [1m[35mPlant Load (0.1ms)[0m  SELECT "plants".* FROM "plants" WHERE "plants"."id" = 65661742 LIMIT 1
+  [1m[36mAREL (0.2ms)[0m  [1mDELETE FROM "plants" WHERE "plants"."id" = 65661742[0m
+Redirected to http://test.host/plants
+Completed 302 Found in 2ms
+  [1m[35mSQL (0.1ms)[0m  SELECT COUNT(*) FROM "plants"
+  [1m[36mPlant Load (0.1ms)[0m  [1mSELECT "plants".* FROM "plants" WHERE "plants"."id" = 65661742 LIMIT 1[0m
+  Processing by PlantsController#edit as HTML
+  Parameters: {"id"=>"65661742"}
+  [1m[35mPlant Load (0.1ms)[0m  SELECT "plants".* FROM "plants" WHERE "plants"."id" = 65661742 LIMIT 1
+Rendered plants/_form.html.erb (3.1ms)
+Completed 200 OK in 8ms (Views: 7.2ms | ActiveRecord: 1.3ms)
+  [1m[36mPlant Load (0.1ms)[0m  [1mSELECT "plants".* FROM "plants" WHERE "plants"."id" = 65661742 LIMIT 1[0m
+  Processing by PlantsController#index as HTML
+  [1m[35mPlant Load (0.1ms)[0m  SELECT "plants".* FROM "plants"
+Completed 200 OK in 6ms (Views: 5.3ms | ActiveRecord: 0.2ms)
+  [1m[36mPlant Load (0.1ms)[0m  [1mSELECT "plants".* FROM "plants" WHERE "plants"."id" = 65661742 LIMIT 1[0m
+  Processing by PlantsController#new as HTML
+Rendered plants/_form.html.erb (1.6ms)
+Completed 200 OK in 5ms (Views: 4.2ms | ActiveRecord: 0.1ms)
+  [1m[35mPlant Load (0.1ms)[0m  SELECT "plants".* FROM "plants" WHERE "plants"."id" = 65661742 LIMIT 1
+  Processing by PlantsController#show as HTML
+  Parameters: {"id"=>"65661742"}
+  [1m[36mPlant Load (0.1ms)[0m  [1mSELECT "plants".* FROM "plants" WHERE "plants"."id" = 65661742 LIMIT 1[0m
+Completed 200 OK in 3ms (Views: 2.5ms | ActiveRecord: 0.2ms)
+  [1m[35mPlant Load (0.1ms)[0m  SELECT "plants".* FROM "plants" WHERE "plants"."id" = 65661742 LIMIT 1
+  Processing by PlantsController#update as HTML
+  Parameters: {"plant"=>{"name"=>"Zwiebel", "created_at"=>Mon, 16 May 2011 12:50:27 UTC +00:00, "updated_at"=>Mon, 16 May 2011 12:50:27 UTC +00:00, "id"=>65661742}, "id"=>"65661742"}
+  [1m[36mPlant Load (0.1ms)[0m  [1mSELECT "plants".* FROM "plants" WHERE "plants"."id" = 65661742 LIMIT 1[0m
+WARNING: Can't mass-assign protected attributes: id
+Redirected to http://test.host/plants/65661742
+Completed 302 Found in 2ms
+  [1m[36mSQL (0.3ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mPlant Load (0.1ms)[0m  SELECT "plants".* FROM "plants" WHERE "plants"."name" = 'Kopfsalat' LIMIT 1
+  [1m[36mPlant Load (0.0ms)[0m  [1mSELECT "plants".* FROM "plants" WHERE "plants"."name" = 'Zwiebel' LIMIT 1[0m
+  [1m[35mFamily Load (0.1ms)[0m  SELECT "families".* FROM "families" WHERE "families"."id" = 816664911 LIMIT 1
+  [1m[36mPlant Load (0.1ms)[0m  [1mSELECT "plants".* FROM "plants" WHERE "plants"."name" = 'Randen' LIMIT 1[0m
+  [1m[36mSQL (0.3ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mPlant Load (0.1ms)[0m  SELECT "plants".* FROM "plants" WHERE "plants"."name" = 'Kopfsalat' LIMIT 1
+  [1m[36mPlant Load (0.1ms)[0m  [1mSELECT "plants".* FROM "plants" WHERE "plants"."name" = 'Zwiebel' LIMIT 1[0m
+  [1m[35mFamily Load (0.0ms)[0m  SELECT "families".* FROM "families" WHERE "families"."id" = 816664911 LIMIT 1
+  [1m[36mPlant Load (0.2ms)[0m  [1mSELECT "plants".* FROM "plants" WHERE "plants"."name" = 'Randen' LIMIT 1[0m
+  [1m[36mSQL (0.1ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mPlant Load (0.1ms)[0m  SELECT "plants".* FROM "plants" WHERE "plants"."name" = 'Kopfsalat' LIMIT 1
+  [1m[36mFamily Load (0.1ms)[0m  [1mSELECT "families".* FROM "families" WHERE "families"."id" = 763136100 LIMIT 1[0m
+  [1m[35mPlant Load (0.1ms)[0m  SELECT "plants".* FROM "plants" WHERE "plants"."name" = 'Zwiebel' LIMIT 1
+  [1m[36mFamily Load (0.1ms)[0m  [1mSELECT "families".* FROM "families" WHERE "families"."id" = 816664911 LIMIT 1[0m
+  [1m[35mPlant Load (0.1ms)[0m  SELECT "plants".* FROM "plants" WHERE "plants"."name" = 'Randen' LIMIT 1
+  [1m[36mFamily Load (0.1ms)[0m  [1mSELECT "families".* FROM "families" WHERE "families"."id" = 395590619 LIMIT 1[0m
+  [1m[36mSQL (0.2ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mPlant Load (0.2ms)[0m  SELECT "plants".* FROM "plants" WHERE "plants"."name" = 'Kopfsalat' LIMIT 1
+  [1m[36mFamily Load (0.1ms)[0m  [1mSELECT "families".* FROM "families" WHERE "families"."id" = 763136100 LIMIT 1[0m
+  [1m[35mPlant Load (0.1ms)[0m  SELECT "plants".* FROM "plants" WHERE "plants"."name" = 'Zwiebel' LIMIT 1
+  [1m[36mFamily Load (0.1ms)[0m  [1mSELECT "families".* FROM "families" WHERE "families"."id" = 816664911 LIMIT 1[0m
+  [1m[35mPlant Load (0.1ms)[0m  SELECT "plants".* FROM "plants" WHERE "plants"."name" = 'Randen' LIMIT 1
+  [1m[36mFamily Load (0.1ms)[0m  [1mSELECT "families".* FROM "families" WHERE "families"."id" = 395590619 LIMIT 1[0m
