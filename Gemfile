@@ -30,5 +30,6 @@ gem 'sqlite3-ruby', :require => 'sqlite3'
 group :development, :test do
   gem 'rspec-rails'
   gem 'cucumber-rails'
+  gem 'database_cleaner'
   gem 'webrat'
 end
