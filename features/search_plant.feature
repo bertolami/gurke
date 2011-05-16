@@ -1,9 +1,9 @@
-Feature: search and find plants
-  as a gardner
+Feature: show details of a plant
+  as a gardener
   when I'm looking for details of a plant
-  Gurke gives me an answer
+  Gurke show me the details
 
-  Scenario Outline: looking for details of the plant
+  Scenario Outline: looking for family name and energy need of the plant
     Given A "<plant>" name
     Then The family name is "<family>"
     And the energy need is "<energy_need>"
