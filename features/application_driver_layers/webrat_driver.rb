@@ -12,7 +12,6 @@ module WebratLayer
     visit families_path
     response
   end
-
   def create_new_plant(plant_name, family_name)
     visit new_plant_path
     fill_in "Name", :with => plant_name
@@ -24,6 +23,17 @@ module WebratLayer
     visit plants_path
     response
   end
+  def click_edit(name)
+    click_link_within "div[id*=\""+name+"\"]", "Edit"
+  end
 
+  def click_show(name)
+    click_link_within "div[id*=\""+name+"\"]", "Show"
+  end
+
+  def  assert_plant_available name
+    visit plants_path
+    response.should contain(name)
+  end
 
 end

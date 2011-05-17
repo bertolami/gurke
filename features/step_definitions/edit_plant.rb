@@ -1,7 +1,6 @@
 Given /^the plant "([^"]*)" is already known$/ do |original_name|
   @original_name = original_name
-  visit plants_path
-  response.should contain(@original_name)
+  assert_plant_available original_name
 end
 
 When /^I rename the plant to "([^"]*)"$/ do |new_name|
@@ -13,8 +12,7 @@ end
 
 Then /^the plant is available under the new name$/ do
   response.should contain(@new_name)
-  visit plants_path
-  response.should contain(@new_name)
+  assert_plant_available @new_name
 end
 
 When /^I change the family from "([^"]*)" to "([^"]*)"$/ do |original_family_name, new_family_name|
@@ -42,10 +40,3 @@ Then /^the old family does not contains the newly changed plant anymore$/ do
 end
 
 
-def click_edit(name)
-  click_link_within "div[id*=\""+name+"\"]", "Edit"
-end
-
-def click_show(name)
-  click_link_within "div[id*=\""+name+"\"]", "Show"
-end

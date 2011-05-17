@@ -19,6 +19,10 @@ Spinat:
 Kopfsalat:
   name: Kopfsalat
   family: koerbchenbluetler
+  
+ruebli:
+  name: Rüebli
+  family: doldenblütler
 
 Rucola:
   name: Rucola
