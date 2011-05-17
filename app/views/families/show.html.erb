@@ -10,6 +10,13 @@
   <%= @family.energy %>
 </p>
 
+<p>
+  <b>Plants:</b>
+  <% @family.plants.each do |plant| %>
+    <%= plant.name %> 
+  <%  end %>
+</p>
+
 
 <%= link_to 'Edit', edit_family_path(@family) %> |
 <%= link_to 'Back', families_path %>
