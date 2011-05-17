@@ -3,7 +3,6 @@ Given /^I am logged in as "([^"]*)" user$/ do |arg1|
 end
 
 Given /^the family "([^"]*)" is already known$/ do |family|
-  World.methods.sort
   visit families_path
   response.should contain(family)
 end
