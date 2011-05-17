@@ -18,7 +18,7 @@ class FamiliesControllerTest < ActionController::TestCase
 
   test "should create family" do
     assert_difference('Family.count') do
-      post :create, :family => @family.attributes
+      post :create, :family => {:name => "My Family", :energy => "low" }
     end
 
     assert_redirected_to family_path(assigns(:family))
