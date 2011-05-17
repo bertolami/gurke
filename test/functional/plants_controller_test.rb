@@ -16,9 +16,17 @@ class PlantsControllerTest < ActionController::TestCase
     assert_response :success
   end
 
-  test "should create plant" do
+  test "should create plant without family" do
     assert_difference('Plant.count') do
-      post :create, :plant => @plant.attributes
+      post :create, :plant => {:name => "plant without family"}
+    end
+
+    assert_redirected_to plant_path(assigns(:plant))
+  end
+
+  test "should create plant with family" do
+    assert_difference('Plant.count') do
+      post :create, :plant => {:name => "plant with family" ,:family_id => "1"}
     end
 
     assert_redirected_to plant_path(assigns(:plant))
