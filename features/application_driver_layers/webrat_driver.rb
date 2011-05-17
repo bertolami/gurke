@@ -8,7 +8,19 @@ module WebratLayer
   end
 
   def find_family(family_name)
-      visit families_path
-      response
+    visit families_path
+    response
+  end
+  def click_edit(name)
+    click_link_within "div[id*=\""+name+"\"]", "Edit"
+  end
+
+  def click_show(name)
+    click_link_within "div[id*=\""+name+"\"]", "Show"
+  end
+
+  def  assert_plant_available name
+    visit plants_path
+    response.should contain(name)
   end
 end

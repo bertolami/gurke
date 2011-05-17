@@ -20,3 +20,6 @@ gaensefussgewaechse:
 raublattgewächse:
   name: Raublattgewächse
   energy: schwachzehrend
+doldenblütler:
+  name: Doldenblütler
+  energy: schwachzehrend
