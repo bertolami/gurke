@@ -25,6 +25,7 @@ class PlantsController < ApplicationController
   # GET /plants/new.xml
   def new
     @plant = Plant.new
+    @families = Family.all
 
     respond_to do |format|
       format.html # new.html.erb
@@ -35,6 +36,7 @@ class PlantsController < ApplicationController
   # GET /plants/1/edit
   def edit
     @plant = Plant.find(params[:id])
+    @families = Family.all
   end
 
   # POST /plants

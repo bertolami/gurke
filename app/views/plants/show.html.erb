@@ -5,6 +5,11 @@
   <%= @plant.name %>
 </p>
 
+<p>
+  <b>Family:</b>
+  <%= @plant.family.name %>
+</p>
+
 
 <%= link_to 'Edit', edit_plant_path(@plant) %> |
 <%= link_to 'Back', plants_path %>

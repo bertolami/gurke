@@ -16,3 +16,7 @@ koerbchenbluetler:
 gaensefussgewaechse:
  name: Gaensefussgewaechse
  energy: starkzehrend
+
+raublattgewächse:
+  name: Raublattgewächse
+  energy: schwachzehrend
