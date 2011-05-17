@@ -30,6 +30,8 @@ GEM
     activesupport (3.0.6)
     arel (2.0.9)
     builder (2.1.2)
+    ci_reporter (1.6.4)
+      builder (>= 2.1.2)
     columnize (0.3.2)
     configuration (1.2.0)
     cucumber (0.10.2)
@@ -122,6 +124,7 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
+  ci_reporter
   cucumber-rails
   database_cleaner
   heroku
