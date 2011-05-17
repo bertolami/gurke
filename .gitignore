@@ -2,3 +2,5 @@ log
 db/*sqlite3
 tmp
 webrat.log
+test_results
+features/output
