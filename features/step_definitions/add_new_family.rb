@@ -1,6 +1,5 @@
 
 Given /^I am logged in as admin user$/ do
-
 end
 
 When /^I create a "([^"]*)" "([^"]*)"$/ do |energy, family|
