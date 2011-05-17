@@ -10,7 +10,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20110517083259) do
+ActiveRecord::Schema.define(:version => 20110517155940) do
 
   create_table "families", :force => true do |t|
     t.string   "name"
@@ -24,6 +24,12 @@ ActiveRecord::Schema.define(:version => 20110517083259) do
     t.datetime "created_at"
     t.datetime "updated_at"
     t.integer  "family_id"
+    t.integer  "seed_from_month"
+    t.integer  "seed_from_day"
+    t.integer  "seed_to_month"
+    t.integer  "seed_to_day"
+    t.integer  "maturity_time_in_days"
+    t.integer  "variability_in_percent"
   end
 
 end

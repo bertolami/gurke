@@ -10,6 +10,11 @@
   <%= @plant.family.name %>
 </p>
 
+<p>
+  <b>Aussaat</b>
+ Zwischen  <%= nice_time(@plant.seed_from_month, @plant.seed_from_day) %>
+ und  <%= nice_time(@plant.seed_to_month, @plant.seed_to_day) %>
+</p>
 
 <%= link_to 'Edit', edit_plant_path(@plant) %> |
 <%= link_to 'Back', plants_path %>
