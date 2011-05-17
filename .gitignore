@@ -5,4 +5,4 @@ webrat.log
 test_results
 features/output
 nbproject/private/rake-d.txt
-public/*
+public/cucumber_output.html
