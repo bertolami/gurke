@@ -3,7 +3,7 @@ Feature: Edit a plant
   I want to edit an existing plant
   In order to maintain the plant data set
 
-@vip
+  @wip
   Scenario: Rename Rucola to Rucoli
     Given I am logged in as "admin" user
     And the plant "Rucola" is already known
