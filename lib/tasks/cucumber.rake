@@ -17,7 +17,7 @@ begin
     Cucumber::Rake::Task.new({:ok => 'db:test:prepare'}, 'Run features that should pass') do |t|
       t.binary = vendored_cucumber_bin # If nil, the gem's binary is used.
       t.fork = true # You may get faster startup if you set this to false
-      t.cucumber_opts = %w{--format junit --out features/output --format html --out features/output.html}
+      t.cucumber_opts = %w{--format junit --out features/output --format html --out public/cucumber_output.html}
       t.profile = 'default'
     end
 
