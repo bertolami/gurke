@@ -1,0 +1,56 @@
+Starkzehrer	Nachtschattengewächse	Auberginen
+Starkzehrer	Kreuzblütler	Blumenkohl
+Starkzehrer	Kreuzblütler	Broccoli
+Schwachzehrer	Schmetterlingsblütler	Buschbohnen
+Schwachzehrer	Körbchenblütler	Chicoree
+		Chicorino Rosso
+Starkzehrer	Kreuzblütler	Chinakohl
+Schwachzehrer	Körbchenblütler	Endivien
+Schwachzehrer	Schmetterlingsblütler	Erbsen
+Schwachzehrer	Doldenblütler	Fenchel
+Schwachzehrer	Schmetterlingsblütler	Feuerbohnen
+Starkzehrer	Gräser	Getreide
+		Gurken
+Starkzehrer	Kreuzblütler	Herbstrübe
+Starkzehrer	Nachtschattengewächse	Kartoffeln
+Schwachzehrer	Schmetterlingsblütler	Kefen
+Schwachzehrer	Liliengewächse	Knoblauch
+Starkzehrer	Kreuzblütler	Kohlrabi
+Starkzehrer	Gänsefussgewächse	Krautstiel
+Starkzehrer	Kreuzblütler	Kresse
+Starkzehrer	Kürbisgewächse	Kürbis
+Schwachzehrer	Körbchenblütler	Lattich
+Schwachzehrer	Liliengewächse	Lauch
+Starkzehrer	Kreuzblütler	Mairübe
+		Nüsslisalat
+Starkzehrer	Kreuzblütler	Pak Choi
+Schwachzehrer	Doldenblütler	Pastinaken
+Starkzehrer	Kürbisgewächse	Patisson
+Starkzehrer	Nachtschattengewächse	Peperoni
+Schwachzehrer	Doldenblütler	Petersilie
+Schwachzehrer	Schmetterlingsblütler	Puffbohnen
+Starkzehrer	Kreuzblütler	Radisli
+Starkzehrer	Gänsefussgewächse	Randen
+Starkzehrer	Kreuzblütler	Rettich
+Starkzehrer	Kreuzblütler	Rotkabis
+		Rucola
+Schwachzehrer	Doldenblütler	Rüebli
+Schwachzehrer	Körbchenblütler	Salat
+		Salatzwiebeln
+Schwachzehrer	Liliengewächse	Schalotten
+Starkzehrer	Gänsefussgewächse	Schnittmangold
+		Schnittsalat
+Schwachzehrer	Körbchenblütler	Schwarzwurzeln
+Schwachzehrer	Doldenblütler	Sellerie
+Starkzehrer	Gänsefussgewächse	Spinat
+Schwachzehrer	Schmetterlingsblütler	Stangenbohnen
+Starkzehrer	Nachtschattengewächse	Tomaten
+Schwachzehrer	Körbchenblütler	Topinambur
+Starkzehrer	Kreuzblütler	Weisskabis
+Starkzehrer	Kreuzblütler	Wirz
+Starkzehrer	Kreuzblütler	Wosenkohl
+Starkzehrer	Kürbisgewächse	Zucchetti
+Schwachzehrer	Körbchenblütler	Zuckerhut
+Starkzehrer	Gräser	Zuckernais
+Schwachzehrer	Liliengewächse	Zwiebel
+
