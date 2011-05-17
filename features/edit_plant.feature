@@ -8,7 +8,7 @@ Feature: Edit a plant
     And the plant "Rucola" is already known
     When I rename the plant to "Rucoli"
     Then the plant is available under the new name
-@wip
+
  Scenario: Change the family of Kopfsalat to Gaensefussgewaechse
     Given I am logged in as "admin" user
     And the plant "Kopfsalat" is already known

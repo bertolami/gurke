@@ -26,13 +26,19 @@ When /^I change the family to "([^"]*)"$/ do |new_family_name|
 end
 
 Then /^the family of the plant is changed$/ do
-  @response.should contain @new_family_name
+  response.should contain @new_family_name
 end
 
 Then /^the family contains the newly changed plant$/ do
-  pending # express the regexp above with the code you wish you had
+  visit families_path
+  click_show @new_family_name
+  response.should contain(@original_name)
 end
 
-def click_edit(plant_name)
-  click_link_within "div[id*=\""+plant_name+"\"]", "Edit"
+def click_edit(name)
+  click_link_within "div[id*=\""+name+"\"]", "Edit"
+end
+
+def click_show(name)
+  click_link_within "div[id*=\""+name+"\"]", "Show"
 end

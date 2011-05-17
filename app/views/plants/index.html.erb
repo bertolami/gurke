@@ -9,7 +9,7 @@
   </tr>
 
 <% @plants.each do |plant| %>
-  <div id="<%= plant.name %>">
+  <div id="plant.<%= plant.name %>">
   <tr>
     <td><%= plant.name %></td>
     <td><%= link_to 'Show', plant %></td>
