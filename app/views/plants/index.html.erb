@@ -9,12 +9,14 @@
   </tr>
 
 <% @plants.each do |plant| %>
+  <div id="<%= plant.name %>">
   <tr>
     <td><%= plant.name %></td>
     <td><%= link_to 'Show', plant %></td>
     <td><%= link_to 'Edit', edit_plant_path(plant) %></td>
     <td><%= link_to 'Destroy', plant, :confirm => 'Are you sure?', :method => :delete %></td>
   </tr>
+  </div>
 <% end %>
 </table>
 
