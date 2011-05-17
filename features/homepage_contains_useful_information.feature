@@ -10,6 +10,6 @@ Feature: Homepage contains usefull information
 
    Scenarios:
       | diplay_name  | target              |
-      | Planzen    | plants   |
-      | Planzenfamilien      | families     |
+      | Pflanzen    | plants   |
+      | Pflanzenfamilien      | families     |
       
