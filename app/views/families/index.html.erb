@@ -10,6 +10,7 @@
   </tr>
 
 <% @families.each do |family| %>
+  <div id="family.<%= family.name %>">
   <tr>
     <td><%= family.name %></td>
     <td><%= family.energy %></td>
@@ -17,6 +18,7 @@
     <td><%= link_to 'Edit', edit_family_path(family) %></td>
     <td><%= link_to 'Destroy', family, :confirm => 'Are you sure?', :method => :delete %></td>
   </tr>
+  </div>
 <% end %>
 </table>
 
