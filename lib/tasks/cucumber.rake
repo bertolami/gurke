@@ -18,6 +18,10 @@ begin
       t.binary = vendored_cucumber_bin # If nil, the gem's binary is used.
       t.fork = true # You may get faster startup if you set this to false
       t.cucumber_opts = %w{--format junit --out test_results/features --format html --out public/cucumber_output.html}
+      puts "task: #{task}"
+      if task
+        t.cucumber_opts << "-t" <<"#{task}"
+      end
       t.profile = 'default'
     end
 
