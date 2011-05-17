@@ -8,7 +8,7 @@ Feature: show plants of a family
     Then the plants are "<plants>"
 
     Scenarios:
-      | family              | plants                   |
-      | Koerbchenbluetler   | Kopfsalat                |
-      | Gaensefussgewaechse | Randen Spinat Krautstiel |
-      | Liliengewaechse     | Zwiebel                  |
+      | family              | plants        |
+      | Koerbchenbluetler   | Kopfsalat     |
+      | Gaensefussgewaechse | Randen Spinat |
+      | Liliengewaechse     | Zwiebel       |
