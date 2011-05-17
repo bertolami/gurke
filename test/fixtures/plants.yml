@@ -6,5 +6,16 @@
 #
 Zwiebel:
   name: Zwiebel
+  family: liliengewaechse
+
 Randen:
   name: Randen
+  family: gaensefussgewaechse
+
+Spinat:
+  name: Spinat
+  family: gaensefussgewaechse
+
+Kopfsalat:
+  name: Kopfsalat
+  family: koerbchenbluetler
