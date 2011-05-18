@@ -3,7 +3,7 @@ Feature: Access seed information of a plant
   I want to obtain seed and harvest information
   In order to improve predicatility
 
-  @wip
+
   Scenario Outline: Display seed information on plant details page
     Given the plant "<plant>" is already known
     When I display the details of "<plant>"
