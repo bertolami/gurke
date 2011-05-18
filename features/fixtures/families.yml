@@ -8,18 +8,24 @@
 liliengewaechse:
  name: Liliengewaechse
  energy: schwachzehrend
+ field_state: A
 
 koerbchenbluetler:
  name: Koerbchenbluetler
  energy: schwachzehrend
+ field_state: B
 
 gaensefussgewaechse:
  name: Gaensefussgewaechse
  energy: starkzehrend
+ field_state: C
 
 raublattgewächse:
   name: Raublattgewächse
   energy: schwachzehrend
+  field_state: D
+
 doldenblütler:
   name: Doldenblütler
   energy: schwachzehrend
+  field_state: A
