@@ -1,5 +1,5 @@
 module WebratLayer
-
+  include ApplicationHelper
 
   def create_new_family(family, energy)
     visit new_family_path
@@ -26,11 +26,11 @@ module WebratLayer
 
   #go to edit page
   def click_edit(the_name)
-    click_link_within "div[id*=\""+the_name+"\"]", "Edit"
+    click_link_within "div[id*=\""+to_html_tag(the_name)+"\"]", "Edit"
   end
 
   def click_show(the_name)
-    click_link_within "div[id*=\""+the_name+"\"]", "Show"
+    click_link_within "div[id*=\""+to_html_tag(the_name)+"\"]", "Show"
   end
 
   def rename_plant(original_name, new_name)
