@@ -1,56 +1,59 @@
-Starkzehrer	Nachtschattengewächse	Auberginen
-Starkzehrer	Kreuzblütler	Blumenkohl
-Starkzehrer	Kreuzblütler	Broccoli
-Schwachzehrer	Schmetterlingsblütler	Buschbohnen
-Schwachzehrer	Körbchenblütler	Chicoree
-		Chicorino Rosso
-Starkzehrer	Kreuzblütler	Chinakohl
-Schwachzehrer	Körbchenblütler	Endivien
-Schwachzehrer	Schmetterlingsblütler	Erbsen
-Schwachzehrer	Doldenblütler	Fenchel
-Schwachzehrer	Schmetterlingsblütler	Feuerbohnen
-Starkzehrer	Gräser	Getreide
-		Gurken
-Starkzehrer	Kreuzblütler	Herbstrübe
-Starkzehrer	Nachtschattengewächse	Kartoffeln
-Schwachzehrer	Schmetterlingsblütler	Kefen
-Schwachzehrer	Liliengewächse	Knoblauch
-Starkzehrer	Kreuzblütler	Kohlrabi
-Starkzehrer	Gänsefussgewächse	Krautstiel
-Starkzehrer	Kreuzblütler	Kresse
-Starkzehrer	Kürbisgewächse	Kürbis
-Schwachzehrer	Körbchenblütler	Lattich
-Schwachzehrer	Liliengewächse	Lauch
-Starkzehrer	Kreuzblütler	Mairübe
-		Nüsslisalat
-Starkzehrer	Kreuzblütler	Pak Choi
-Schwachzehrer	Doldenblütler	Pastinaken
-Starkzehrer	Kürbisgewächse	Patisson
-Starkzehrer	Nachtschattengewächse	Peperoni
-Schwachzehrer	Doldenblütler	Petersilie
-Schwachzehrer	Schmetterlingsblütler	Puffbohnen
-Starkzehrer	Kreuzblütler	Radisli
-Starkzehrer	Gänsefussgewächse	Randen
-Starkzehrer	Kreuzblütler	Rettich
-Starkzehrer	Kreuzblütler	Rotkabis
-		Rucola
-Schwachzehrer	Doldenblütler	Rüebli
-Schwachzehrer	Körbchenblütler	Salat
-		Salatzwiebeln
-Schwachzehrer	Liliengewächse	Schalotten
-Starkzehrer	Gänsefussgewächse	Schnittmangold
-		Schnittsalat
-Schwachzehrer	Körbchenblütler	Schwarzwurzeln
-Schwachzehrer	Doldenblütler	Sellerie
-Starkzehrer	Gänsefussgewächse	Spinat
-Schwachzehrer	Schmetterlingsblütler	Stangenbohnen
-Starkzehrer	Nachtschattengewächse	Tomaten
-Schwachzehrer	Körbchenblütler	Topinambur
-Starkzehrer	Kreuzblütler	Weisskabis
-Starkzehrer	Kreuzblütler	Wirz
-Starkzehrer	Kreuzblütler	Wosenkohl
-Starkzehrer	Kürbisgewächse	Zucchetti
-Schwachzehrer	Körbchenblütler	Zuckerhut
-Starkzehrer	Gräser	Zuckernais
-Schwachzehrer	Liliengewächse	Zwiebel
-
+				Aussaat Freiland
+Feld				f	m	a	m	j	j	a	s	o
+Feld A	Starkzehrer	Nachtschattengewächse	Auberginen
+Feld B	Starkzehrer	Kreuzblütler	Blumenkohl
+Feld B	Starkzehrer	Kreuzblütler	Broccoli				x	x
+	Schwachzehrer	Schmetterlingsblütler	Buschbohnen
+Feld A	Schwachzehrer	Körbchenblütler	Chicoree					x	x
+Feld B			Chicorino Rosso			x
+Feld B	Starkzehrer	Kreuzblütler	Chinakohl							x
+Feld D	Schwachzehrer	Körbchenblütler	Endivien
+Feld B	Schwachzehrer	Schmetterlingsblütler	Erbsen
+Feld C	Schwachzehrer	Doldenblütler	Fenchel
+	Schwachzehrer	Schmetterlingsblütler	Feuerbohnen					x
+Feld A	Starkzehrer	Gräser	Getreide
+Feld C			Gurken	x	x	x
+Feld B	Starkzehrer	Kreuzblütler	Herbstrübe
+Feld D	Starkzehrer	Nachtschattengewächse	Kartoffeln
+Feld A	Schwachzehrer	Schmetterlingsblütler	Kefen
+Feld A	Schwachzehrer	Liliengewächse	Knoblauch
+Feld A	Starkzehrer	Kreuzblütler	Kohlrabi		x	x
+Feld C	Starkzehrer	Gänsefussgewächse	Krautstiel					x
+Feld B	Starkzehrer	Kreuzblütler	Kresse
+Feld D	Starkzehrer	Kürbisgewächse	Kürbis
+Feld A	Schwachzehrer	Körbchenblütler	Lattich
+	Schwachzehrer	Liliengewächse	Lauch		x					x	x
+Feld A	Starkzehrer	Kreuzblütler	Mairübe
+Feld D			Nüsslisalat		x	x	x
+Feld C	Starkzehrer	Kreuzblütler	Pak Choi
+Feld C	Schwachzehrer	Doldenblütler	Pastinaken
+Feld D	Starkzehrer	Kürbisgewächse	Patisson
+Feld B	Starkzehrer	Nachtschattengewächse	Peperoni
+Feld A	Schwachzehrer	Doldenblütler	Petersilie		x	x	x	x		x
+Feld A	Nahrungstyp	Gattung	Pflanze
+Feld A	Schwachzehrer	Schmetterlingsblütler	Puffbohnen
+Feld A	Starkzehrer	Kreuzblütler	Radisli		x	x	x	x	x
+Feld A	Starkzehrer	Gänsefussgewächse	Randen
+	Starkzehrer	Kreuzblütler	Rettich			x
+Feld D	Starkzehrer	Kreuzblütler	Rotkabis		x	x	x	x	x
+Feld B			Rucola
+	Schwachzehrer	Doldenblütler	Rüebli
+Feld D	Schwachzehrer	Körbchenblütler	Salat			x				x	x
+Feld A			Salatzwiebeln		x	x			x
+	Schwachzehrer	Liliengewächse	Schalotten			x
+Feld B	Starkzehrer	Gänsefussgewächse	Schnittmangold
+Feld D			Schnittsalat		x	x
+Feld A	Schwachzehrer	Körbchenblütler	Schwarzwurzeln
+Feld B	Schwachzehrer	Doldenblütler	Sellerie
+Feld C	Starkzehrer	Gänsefussgewächse	Spinat
+Feld B	Schwachzehrer	Schmetterlingsblütler	Stangenbohnen
+Feld A	Starkzehrer	Nachtschattengewächse	Tomaten
+Feld A	Schwachzehrer	Körbchenblütler	Topinambur
+Feld A	Starkzehrer	Kreuzblütler	Weisskabis
+Feld C	Starkzehrer	Kreuzblütler	Wirz					x	x
+Feld B	Starkzehrer	Kreuzblütler	Wosenkohl
+Feld C	Starkzehrer	Kürbisgewächse	Zucchetti			x
+Feld D	Schwachzehrer	Körbchenblütler	Zuckerhut					x	x
+	Starkzehrer	Gräser	Zuckernais
+	Schwachzehrer	Liliengewächse	Zwiebel
+Feld C
