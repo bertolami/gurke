@@ -4,11 +4,13 @@ class PlantTest < ActiveSupport::TestCase
 
 
   test "a plant knows the energy of its family" do
-    family = Family.new(:name => "Family" , :energy => "HOCH")
-    plant = Plant.new(:name => "Plant")
-    plant.family = family
+    plant = plants(:Spinat)
+    assert_equal "Starkzehrer", plant.energy
+  end
 
-    assert_equal "HOCH", plant.energy
-
+  test "a plant with no family returns empty string for family name" do
+    plant = plants(:Zwiebel)
+    plant.family = nil
+    assert_equal "", plant.family_name
   end
 end
