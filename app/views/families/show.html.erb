@@ -6,12 +6,17 @@
   </p>
 
   <p>
-    <b>Energy:</b>
+    <b>Energie:</b>
     <%= @family.energy %>
   </p>
 
   <p>
-    <b>Plants:</b>
+    <b>Feld:</b>
+    <%= @family.field_state %>
+  </p>
+
+  <p>
+    <b>Pflanzen:</b>
     <% @family.plants.each do |plant| %>
       <%= plant.name %>
     <%  end %>

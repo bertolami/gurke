@@ -25,6 +25,7 @@ class BedsController < ApplicationController
   # GET /beds/new.xml
   def new
     @bed = Bed.new
+    @possible_states = FieldState::all_states.collect{|state| [state.id, state.id]}
 
     respond_to do |format|
       format.html # new.html.erb
@@ -35,6 +36,7 @@ class BedsController < ApplicationController
   # GET /beds/1/edit
   def edit
     @bed = Bed.find(params[:id])
+    @possible_states = FieldState::all_states.collect{|state| [state.id, state.id]}
   end
 
   # POST /beds

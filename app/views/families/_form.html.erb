@@ -17,8 +17,13 @@
   </div>
   <div class="field">
     <%= f.label :energy %><br />
-    <%= f.text_field :energy %>
+    <%= select "family", "energy", @possible_energies%>
   </div>
+  <div class="field">
+    <%= f.label :field_state %><br />
+    <%= select "family", "field_state", @possible_states%>
+  </div>
+
   <div class="actions">
     <%= f.submit %>
   </div>

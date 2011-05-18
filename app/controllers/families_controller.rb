@@ -25,6 +25,8 @@ class FamiliesController < ApplicationController
   # GET /families/new.xml
   def new
     @family = Family.new
+    @possible_energies = Energy::all_energies.collect{|e| [e.id, e.id]}
+    @possible_states = FieldState::all_states.collect{|state| [state.id, state.id]}
 
     respond_to do |format|
       format.html # new.html.erb
@@ -35,6 +37,8 @@ class FamiliesController < ApplicationController
   # GET /families/1/edit
   def edit
     @family = Family.find(params[:id])
+    @possible_energies = Energy::all_energies.collect{|e| [e.id, e.id]}
+    @possible_states = FieldState::all_states.collect{|state| [state.id, state.id]}
   end
 
   # POST /families

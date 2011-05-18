@@ -13,9 +13,10 @@
 
   <div class="field">
     <%= f.label :field_state %><br />
-    <%= select "bed", "field_state", [["A", "A"],["B", "B"],["C", "C"],["D", "D"]] %>
+    <%= select "bed", "field_state", @possible_states%>
   </div>
 
+ 
   <div class="actions">
     <%= f.submit %>
   </div>
