@@ -19,3 +19,12 @@ Spinat:
 Kopfsalat:
   name: Kopfsalat
   family: koerbchenbluetler
+
+ruebli:
+  name: Rüebli
+  family: koerbchenbluetler
+  seed_from_month: 4
+  seed_from_day: 1
+  seed_to_month: 6
+  seed_to_day: 30
+  maturity_time_in_days: 60

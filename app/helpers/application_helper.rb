@@ -10,4 +10,8 @@ module ApplicationHelper
   def replace_umlaute string
     string.gsub(/[ä]/, "ae").gsub(/[ö]/, "oe").gsub(/[ü]/, "ue")
   end
+
+  def unknown
+    "unbekannt"
+  end
 end

@@ -5,13 +5,19 @@ class PlantTest < ActiveSupport::TestCase
   include PlantsHelper
 
   test "60 maturity days renders to 2 Monate" do
-
     assert_equal "2 Monate",  render_maturity_days(60)
-
   end
 
   test "62 maturity days renders to 2 Monate" do
     assert_equal "2 Monate",  render_maturity_days(62)
+  end
+
+  test "30 maturity days renders to 1 Monat" do
+    assert_equal "1 Monat",  render_maturity_days(30)
+  end
+  
+  test "1 maturity day renders to 1 Tag" do
+    assert_equal "1 Tag",  render_maturity_days(1)
   end
 
   test "29 maturity days renders to 29 Tage" do
@@ -37,5 +43,26 @@ class PlantTest < ActiveSupport::TestCase
 
   test "nil renders to unbekannt" do
     assert_equal "unbekannt", nice_time(nil,nil)
+  end
+
+  test "render seed time should render Zwischen <Begin> und <End> if <Begin> and <End> do differ" do
+    assert_equal "Zwischen Anfang April und Ende Juni", render_seed_time(plants(:ruebli))
+  end
+
+  test "render seed time should render <Begin> if <Begin> and <End> do are equal" do
+    ruebli = plants(:ruebli)
+    ruebli.seed_to_month = ruebli.seed_from_month
+    ruebli.seed_to_day = ruebli.seed_from_day 
+    assert_equal "Anfang April", render_seed_time(ruebli)
+  end
+
+  test "render variability in percent for 10%" do
+   assert_equal "10%", render_variability_in_percent(10)
+  end
+  test "render variability in percent for unknown" do
+   assert_equal "unbekannt", render_variability_in_percent(nil)
+  end
+   test "render variability in percent for 0%" do
+   assert_equal "0%", render_variability_in_percent(0)
   end
 end
