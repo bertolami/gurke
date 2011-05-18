@@ -6,16 +6,16 @@
 #
 liliengewaechse:
  name: Liliengewaechse
- energy: schwachzehrend
+ energy: Schwachzehrer
 
 koerbchenbluetler:
  name: Koerbchenbluetler
- energy: schwachzehrend
+ energy: Schwachzehrer
 
 gaensefussgewaechse:
  name: Gaensefussgewaechse
- energy: starkzehrend
+ energy: Starkzehrer
 
 raublattgewächse:
   name: Raublattgewächse
-  energy: schwachzehrend
+  energy: Schwachzehrer

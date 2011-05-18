@@ -1,0 +1,17 @@
+<%= form_for(@bed) do |f| %>
+  <% if @bed.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@bed.errors.count, "error") %> prohibited this bed from being saved:</h2>
+
+      <ul>
+      <% @bed.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

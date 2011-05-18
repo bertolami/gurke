@@ -10,7 +10,7 @@
   </tr>
 
 <% @families.each do |family| %>
-  <div id="family.<%= family.name %>">
+  <div id="family.<%= to_html_tag family.name %>">
   <tr>
     <td><%= family.name %></td>
     <td><%= family.energy %></td>

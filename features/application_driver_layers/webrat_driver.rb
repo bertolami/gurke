@@ -1,5 +1,5 @@
 module WebratLayer
-
+  include ApplicationHelper
 
   def create_new_family(family, energy)
     visit new_family_path
@@ -23,17 +23,30 @@ module WebratLayer
     visit plants_path
     response
   end
-  def click_edit(name)
-    click_link_within "div[id*=\""+name+"\"]", "Edit"
+
+  #go to edit page
+  def click_edit(the_name)
+    click_link_within "div[id*=\""+to_html_tag(the_name)+"\"]", "Edit"
   end
 
-  def click_show(name)
-    click_link_within "div[id*=\""+name+"\"]", "Show"
+  def click_show(the_name)
+    click_link_within "div[id*=\""+to_html_tag(the_name)+"\"]", "Show"
   end
 
-  def  assert_plant_available name
-    visit plants_path
-    response.should contain(name)
+  def rename_plant(original_name, new_name)
+    click_edit  original_name
+    fill_in "Name", :with => new_name
+    click_button
   end
 
+  def rename_family(original_name, new_name)
+    click_edit  original_name
+    select new_name
+    click_button
+  end
+
+  def show_family_details(the_name)
+    visit families_path
+    click_show the_name
+  end
 end

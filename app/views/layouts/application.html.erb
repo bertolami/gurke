@@ -8,7 +8,23 @@
 </head>
 <body>
 
-<%= yield %>
+
+<div id="leftcont">
+	<div id="leftimg"><a title="home" href="/"><img alt="image description" src="/images/menu-top.jpg" /></a></div>
+	<div id="menu">
+		<ul>
+			<li><a title="Pflanzen" href="/plants">Pflanzen</a></li>
+			<li><a title="Gattungen" href="/families">Gattungen</a></li>
+		</ul>
+	</div>
+</div>
+
+<div id="main">
+	<%= yield %>
+
+
+</div>
 
 </body>
 </html>
+
