@@ -41,14 +41,27 @@ module WebratLayer
   end
 
   def rename_family(original_name, new_name)
+    puts "original_name: #{original_name}"
     visit families_path
     click_edit  original_name
-    select new_name
+    fill_in "Name", :with => new_name
     click_button
   end
 
   def show_family_details(the_name)
     visit families_path
     click_show the_name
+  end
+
+  def show_plant_details(the_name)
+    visit plants_path
+    click_show the_name
+  end
+
+  def assign_to_other_family(plant_name, new_family_name)
+    show_plant_details(plant_name)
+    click_edit  plant_name
+    select new_family_name
+    click_button
   end
 end

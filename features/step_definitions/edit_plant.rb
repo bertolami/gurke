@@ -18,10 +18,7 @@ end
 When /^I change the family from "([^"]*)" to "([^"]*)"$/ do |original_family_name, new_family_name|
   @original_family_name = original_family_name
   @new_family_name = new_family_name
- #click_edit  @original_name
-  #select @new_family_name
-  #@response = click_button
-  @response = rename_family(@original_family_name, @new_family_name)
+  @response = assign_to_other_family(@original_name, @new_family_name)
 end
 
 Then /^the family of the plant is changed$/ do
@@ -30,15 +27,13 @@ end
 
 Then /^the family contains the newly changed plant$/ do
   visit families_path
-  @response = click_show @new_family_name
-  #response = show_family_details(@new_family_name)
+  @response = show_family_details(@new_family_name)
   @response = response.should contain(@original_name)
 end
 
 Then /^the old family does not contains the newly changed plant anymore$/ do
   visit families_path
-  @response = click_show @original_family_name
-  #response = show_family_details(@original_family_name)
+  @response = show_family_details(@original_family_name)
   @response = response.should_not contain @original_name
 end
 
