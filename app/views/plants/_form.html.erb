@@ -19,6 +19,30 @@
     <%= f.label :family %><br />
     <%= select "plant", "family_id", @families.collect{|family| [family.name, family.id] } %>
   </div>
+  <div class="field">
+    <%= f.label :seed_from_month %><br />
+    <%= f.text_field :seed_from_month %>
+  </div>
+  <div class="field">
+    <%= f.label :seed_from_day %><br />
+    <%= f.text_field :seed_from_day %>
+  </div>
+  <div class="field">
+    <%= f.label :seed_to_month %><br />
+    <%= f.text_field :seed_to_month %>
+  </div>
+  <div class="field">
+    <%= f.label :seed_to_day %><br />
+    <%= f.text_field :seed_to_day %>
+  </div>
+  <div class="field">
+    <%= f.label :maturity_time_in_days %><br />
+    <%= f.text_field :maturity_time_in_days %>
+  </div>
+<div class="field">
+    <%= f.label :variability_in_percent %><br />
+    <%= f.text_field :variability_in_percent %>
+  </div>
   <div class="actions">
     <%= f.submit %>
   </div>
