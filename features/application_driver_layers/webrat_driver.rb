@@ -26,6 +26,7 @@ module WebratLayer
 
   #go to edit page
   def click_edit(the_name)
+    response.should contain the_name
     click_link_within "div[id*=\""+to_html_tag(the_name)+"\"]", "Edit"
   end
 
@@ -40,6 +41,7 @@ module WebratLayer
   end
 
   def rename_family(original_name, new_name)
+    visit families_path
     click_edit  original_name
     select new_name
     click_button
