@@ -17,9 +17,19 @@
 
   <p>
     <b>Aussaat</b>
-    Zwischen  <%= nice_time(@plant.seed_from_month, @plant.seed_from_day) %>
-    und  <%= nice_time(@plant.seed_to_month, @plant.seed_to_day) %>
+     <%= render_seed_time(@plant)%>
   </p>
+
+   <p>
+    <b>Reifezeit</b>
+     <%= render_maturity_days(@plant.maturity_time_in_days)%>
+  </p>
+  
+   <p>
+    <b>Reifezeitungenauigkeit</b>
+     <%= render_variability_in_percent  @plant.variability_in_percent%>
+  </p>
+
 
   <%= link_to 'Edit', edit_plant_path(@plant) %> |
   <%= link_to 'Back', plants_path %>
