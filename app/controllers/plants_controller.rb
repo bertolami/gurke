@@ -59,12 +59,14 @@ class PlantsController < ApplicationController
   # PUT /plants/1.xml
   def update
     @plant = Plant.find(params[:id])
+ 
 
     respond_to do |format|
       if @plant.update_attributes(params[:plant])
         format.html { redirect_to(@plant, :notice => 'Plant was successfully updated.') }
         format.xml  { head :ok }
       else
+           @families = Family.all
         format.html { render :action => "edit" }
         format.xml  { render :xml => @plant.errors, :status => :unprocessable_entity }
       end

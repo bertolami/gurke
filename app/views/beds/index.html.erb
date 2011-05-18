@@ -9,6 +9,7 @@
 
 <% @beds.each do |bed| %>
   <tr>
+    <td>Status: <%= bed.field_state %></td>
     <td><%= link_to 'Show', bed %></td>
     <td><%= link_to 'Edit', edit_bed_path(bed) %></td>
     <td><%= link_to 'Destroy', bed, :confirm => 'Are you sure?', :method => :delete %></td>

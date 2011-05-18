@@ -1,5 +1,10 @@
 <p id="notice"><%= notice %></p>
 
+  <p>
+    <b>state:</b>
+    <%= @bed.field_state%>
+  </p>
+
 
 <%= link_to 'Edit', edit_bed_path(@bed) %> |
 <%= link_to 'Back', beds_path %>

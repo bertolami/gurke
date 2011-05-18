@@ -8,8 +8,7 @@ Feature: Homepage contains usefull information
     When I open the homepage
     Then I see a link to the "<diplay_name>" that goes to "<target>"
 
-   Scenarios:
-      | diplay_name  | target              |
-      | Pflanzen    | plants   |
-      | Pflanzenfamilien      | families     |
-      
+    Scenarios:
+      | diplay_name      | target   |
+      | Pflanzen         | plants   |
+      | Pflanzenfamilien | families |
