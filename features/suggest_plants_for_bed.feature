@@ -1,3 +1,4 @@
+@wip
 Feature: suggest plants for a bed
   As a gardener
   when i have an empty bed and want to plant something on it
