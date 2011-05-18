@@ -1,22 +1,23 @@
 <p id="notice"><%= notice %></p>
+<div id="family.<%= to_html_tag @family.name %>">
+  <p>
+    <b>Name:</b>
+    <%= @family.name %>
+  </p>
 
-<p>
-  <b>Name:</b>
-  <%= @family.name %>
-</p>
+  <p>
+    <b>Energy:</b>
+    <%= @family.energy %>
+  </p>
 
-<p>
-  <b>Energy:</b>
-  <%= @family.energy %>
-</p>
-
-<p>
-  <b>Plants:</b>
-  <% @family.plants.each do |plant| %>
-    <%= plant.name %> 
-  <%  end %>
-</p>
+  <p>
+    <b>Plants:</b>
+    <% @family.plants.each do |plant| %>
+      <%= plant.name %>
+    <%  end %>
+  </p>
 
 
-<%= link_to 'Edit', edit_family_path(@family) %> |
-<%= link_to 'Back', families_path %>
+  <%= link_to 'Edit', edit_family_path(@family) %> |
+  <%= link_to 'Back', families_path %>
+</div>

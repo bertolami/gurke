@@ -4,6 +4,18 @@ class Plant < ActiveRecord::Base
   validates_presence_of :name
 
   def energy
+    if family
     family.energy
+    else
+      ""
+    end
+  end
+
+  def family_name
+    if family
+      family.name
+    else
+      ""
+    end
   end
 end
