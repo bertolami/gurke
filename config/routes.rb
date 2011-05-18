@@ -1,4 +1,6 @@
 Gurke::Application.routes.draw do
+  resources :beds
+
   resources :families
 
   resources :plants
