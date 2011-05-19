@@ -49,7 +49,6 @@ module WebratDriver
   end
 
   def rename_family(original_name, new_name)
-    puts "original_name: #{original_name}"
     visit families_path
     click_edit  original_name
     fill_in "Name", :with => new_name
@@ -94,6 +93,12 @@ module WebratDriver
     click_show the_name
   end
 
+  def add_plants_to_bed(bed_name, plant_names)
+    visit beds_path
+    click_edit  bed_name
+    
+    click_button
+  end
 
 
 

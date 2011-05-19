@@ -21,7 +21,12 @@
     <%= select "bed", "field_state", @possible_states%>
   </div>
 
- 
+  <div class="field">
+    <%= f.label :choosed_plants %><br />
+    <%= select "bed", "choosen_plants", @suggested_plants%>
+  </div>
+
+
   <div class="actions">
     <%= f.submit %>
   </div>
