@@ -1,4 +1,4 @@
-module DummyLayer
+module DummyDriver
 
   def create_new_family(family, energy)
     puts "create_new_family from dummy"

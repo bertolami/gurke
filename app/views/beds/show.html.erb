@@ -1,8 +1,18 @@
 <p id="notice"><%= notice %></p>
-
+  <p>
+    <b>name:</b>
+    <%= @bed.name%>
+  </p>
   <p>
     <b>state:</b>
     <%= @bed.field_state%>
+  </p>
+
+  <p>
+    <b>Mögliche Pflanzen:</b>
+    <% @bed.suggest_plants.each do |plant| %>
+      <%= plant.name %>
+    <%  end %>
   </p>
 
 

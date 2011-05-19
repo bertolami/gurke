@@ -2,19 +2,25 @@
 
 <table>
   <tr>
-    <th></th>
+    <th>Name</th>
+    <th>Status</th>
+    <th>Pflanzen</th>
     <th></th>
     <th></th>
   </tr>
 
-<% @beds.each do |bed| %>
-  <tr>
-    <td>Status: <%= bed.field_state %></td>
-    <td><%= link_to 'Show', bed %></td>
-    <td><%= link_to 'Edit', edit_bed_path(bed) %></td>
-    <td><%= link_to 'Destroy', bed, :confirm => 'Are you sure?', :method => :delete %></td>
-  </tr>
-<% end %>
+  <% @beds.each do |bed| %>
+    <div id="bed.<%= to_html_tag bed.name %>">
+      <tr>
+        <td><%= bed.name %></td>
+        <td><%= bed.field_state %></td>
+        <td></td>
+        <td><%= link_to 'Show', bed %></td>
+        <td><%= link_to 'Edit', edit_bed_path(bed) %></td>
+        <td><%= link_to 'Destroy', bed, :confirm => 'Are you sure?', :method => :delete %></td>
+      </tr>
+    </div>
+  <% end %>
 </table>
 
 <br />

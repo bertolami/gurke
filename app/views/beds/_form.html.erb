@@ -12,6 +12,11 @@
   <% end %>
 
   <div class="field">
+    <%= f.label :name %><br />
+    <%= f.text_field :name %>
+  </div>
+
+  <div class="field">
     <%= f.label :field_state %><br />
     <%= select "bed", "field_state", @possible_states%>
   </div>

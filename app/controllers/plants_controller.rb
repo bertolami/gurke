@@ -21,7 +21,6 @@ class PlantsController < ApplicationController
   # GET /plants/1.xml
   def show
     @plant = Plant.find(params[:id])
-
     respond_to do |format|
       format.html # show.html.erb
       format.xml  { render :xml => @plant }
