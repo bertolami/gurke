@@ -20,7 +20,7 @@ module PlantsHelper
   def render_seed_time(plant)
     from = nice_time(plant.seed_from_month, plant.seed_from_day)
     to = nice_time(plant.seed_to_month, plant.seed_to_day)
-    (from == to) ? from : "Zwischen #{from} und #{to}"
+    (from == to) ? from : "#{from} bis #{to}"
   end
 
   def nice_time(month, day)
