@@ -3,15 +3,21 @@
 <table>
   <tr>
     <th>Name</th>
-    <th></th>
-    <th></th>
-    <th></th>
+    <th>Familie</th>
+    <th>Anforderung:</th>
+    <th>Aussaatzeit</th>
+    <th>Reifezeit</th>
   </tr>
 
 <% @plants.each do |plant| %>
   <div id="plant.<%=to_html_tag plant.name %>">
   <tr>
     <td><%= plant.name %></td>
+    <td><%=  link_to  plant.family_name, plant.family    %>
+    </td>
+    <td><%= plant.energy %></td>
+    <td><%= render_seed_time(plant)%></td>
+    <td><%= render_maturity_days(plant.maturity_time_in_days) %></td>
     <td><%= link_to 'Show', plant %></td>
     <td><%= link_to 'Edit', edit_plant_path(plant) %></td>
     <td><%= link_to 'Destroy', plant, :confirm => 'Are you sure?', :method => :delete %></td>
