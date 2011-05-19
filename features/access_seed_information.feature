@@ -11,4 +11,4 @@ Feature: Access seed information of a plant
 
     Scenarios:
       | plant  | seed_from    | seed_to   | maturation_time | variation |
-      | Rüebli | Anfang April | Ende Juni | 2 Monate        | 10%       |
+      | Rüebli | Anfang April | Ende Juni | 3 Monate        | 10%       |

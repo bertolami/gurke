@@ -1,10 +1,8 @@
 <p id="notice"><%= notice %></p>
 <div id="plant.<%= to_html_tag @plant.name %>">
-  <p>
-    <b>Name:</b>
-    <%= @plant.name %>
-  </p>
+   <h1> <%= @plant.name %></h1>
 
+ 
   <p>
     <b>Gattung</b>
     <%= @plant.family_name %>
@@ -29,6 +27,16 @@
     <b>Reifezeitungenauigkeit</b>
      <%= render_variability_in_percent  @plant.variability_in_percent%>
   </p>
+
+  <h2>Erntezeit berechnen</h2>
+  <%= form_tag(:action => "calculate_harvest_time", :method => "get") do %>
+  <%= label_tag(:seed_day, "Aussaattag:") %>
+  <%= select :seed_day, :seed_day, %w{Anfang Mitte Ende} %>
+  <%= label_tag(:seed_month, "Aussaatmonat:") %>
+  <%= text_field_tag(:seed_month) %>
+  <%= submit_tag("Berechnen") %>
+  <% end %>
+
 
 
   <%= link_to 'Edit', edit_plant_path(@plant) %> |

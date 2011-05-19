@@ -29,7 +29,7 @@ ruebli:
   seed_from_day: 1
   seed_to_month: 6
   seed_to_day: 30
-  maturity_time_in_days: 60
+  maturity_time_in_days: 90
   variability_in_percent: 10
 Rucola:
   name: Rucola

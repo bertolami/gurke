@@ -1,4 +1,10 @@
 class PlantsController < ApplicationController
+  # GET /calculate_harvest_time
+  def calculate_harvest_time
+    puts "hallo"
+    redirect_to :action => "index"
+  end
+
   # GET /plants
   # GET /plants.xml
   def index

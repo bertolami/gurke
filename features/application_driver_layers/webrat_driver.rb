@@ -1,6 +1,7 @@
 module WebratLayer
   include ApplicationHelper
 
+  
   def create_new_family(family, energy)
     visit new_family_path
     fill_in "Name", :with => family
