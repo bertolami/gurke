@@ -4,8 +4,6 @@ module PlantsHelper
   
   MONTH = ['Januar', 'Februar', 'März', 'April', 'Mai', 'Juni', 'Juli', 'August', 'September', 'Oktober', 'November', 'Dezember']
 
-
-
   def render_maturity_days(days)
     if (not days)
       unknown
@@ -23,6 +21,26 @@ module PlantsHelper
     (from == to) ? from : "#{from} bis #{to}"
   end
 
+  def month_from_rendered_seed_time(seed_time_string)
+    split =  seed_time_string.split(/\s+/)
+    month = split.last
+    MONTH.index(month) + 1
+  end
+
+  def day_from_rendered_seed_time(seed_time_string)
+    split =  seed_time_string.split(/\s+/)
+    day = split.first
+    if(day.to_i >0)
+      day.to_i
+    else
+      case day
+      when "Anfang" then 1
+      when "Mitte" then 15
+      when "Ende" then 30
+      else nil
+      end
+    end
+  end
   def nice_time(month, day)
     if(month and day)
       "#{nice_day_of_month_description(day)} #{MONTH[month-1]}"
@@ -44,7 +62,7 @@ module PlantsHelper
   end
 
   def render_variability_in_percent(variability)
-   variability ? "#{variability}%" : unknown
+    variability ? "#{variability}%" : unknown
   end
 
   private

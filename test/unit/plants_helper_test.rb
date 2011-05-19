@@ -1,8 +1,29 @@
 require 'test_helper'
 
 
-class PlantTest < ActiveSupport::TestCase
+class PlantsHelperTest < ActiveSupport::TestCase
   include PlantsHelper
+
+  test "Mitte Juni parsed gives month 6" do
+    assert_equal 6,  month_from_rendered_seed_time("Mitte Juni")
+  end
+
+  test "Juli parsed gives month 7" do
+    assert_equal 7,  month_from_rendered_seed_time("Juli")
+  end
+
+  test "Mitte Juni parsed gives day 15" do
+    assert_equal 15,  day_from_rendered_seed_time("Mitte Juni")
+  end
+
+  test "Anfang Juni parsed gives day 1" do
+    assert_equal 1,  day_from_rendered_seed_time("Anfang Juni")
+  end
+
+
+  test "10. Juni parsed gives day 10" do
+    assert_equal 10,  day_from_rendered_seed_time("10. Juni")
+  end
 
   test "60 maturity days renders to 2 Monate" do
     assert_equal "2 Monate",  render_maturity_days(60)
@@ -46,7 +67,7 @@ class PlantTest < ActiveSupport::TestCase
   end
 
   test "render seed time should render Zwischen <Begin> und <End> if <Begin> and <End> do differ" do
-    assert_equal "Zwischen Anfang April und Ende Juni", render_seed_time(plants(:ruebli))
+    assert_equal "Anfang April bis Ende Juni", render_seed_time(plants(:ruebli))
   end
 
   test "render seed time should render <Begin> if <Begin> and <End> do are equal" do
@@ -57,12 +78,12 @@ class PlantTest < ActiveSupport::TestCase
   end
 
   test "render variability in percent for 10%" do
-   assert_equal "10%", render_variability_in_percent(10)
+    assert_equal "10%", render_variability_in_percent(10)
   end
   test "render variability in percent for unknown" do
-   assert_equal "unbekannt", render_variability_in_percent(nil)
+    assert_equal "unbekannt", render_variability_in_percent(nil)
   end
-   test "render variability in percent for 0%" do
-   assert_equal "0%", render_variability_in_percent(0)
+  test "render variability in percent for 0%" do
+    assert_equal "0%", render_variability_in_percent(0)
   end
 end
