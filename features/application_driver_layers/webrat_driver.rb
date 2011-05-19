@@ -15,6 +15,8 @@ module WebratLayer
   def create_new_plant(plant_name, family_name)
     visit new_plant_path
     fill_in "Name", :with => plant_name
+    fill_in "plant_seed_from_month", :with => "4"
+    fill_in "plant_seed_to_month", :with  => "7"
     select family_name, :from => "plant[family_id]"
     click_button "Create Plant"
   end

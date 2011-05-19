@@ -7,6 +7,8 @@
 Zwiebel:
   name: Zwiebel
   family: liliengewaechse
+  seed_from_month: 4
+  seed_to_month: 6
 
 Randen:
   name: Randen

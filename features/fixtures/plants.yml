@@ -19,7 +19,9 @@ Spinat:
 Kopfsalat:
   name: Kopfsalat
   family: koerbchenbluetler
-  
+  seed_from_month: 4
+  seed_to_month: 6
+
 ruebli:
   name: Rüebli
   family: doldenblütler
@@ -31,6 +33,8 @@ ruebli:
   variability_in_percent: 10
 Rucola:
   name: Rucola
+  seed_from_month: 3
+  seed_to_month: 7
 
 Kartoffel:
   name: Kartoffel

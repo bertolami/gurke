@@ -5,7 +5,7 @@ def scan_to_a s
 end
 
 Given /^a bed "([^"]*)" with field "([^"]*)"$/ do |bed_id, field|
-  @bed = Bed.find_by_field_state field
+  create_new_bed(field)
 end
 
 When /^I ask Gurke for a plant to seed there$/ do

@@ -1,7 +1,7 @@
 @wip
 Feature: suggest plants for a bed
   As a gardener
-  when i have an empty bed and want to plant something on it
+  when I have an empty bed and want to plant something on it
   then Gurke suggests a list of candidate plants
 
   Scenario Outline:

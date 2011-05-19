@@ -26,7 +26,6 @@ class PlantsController < ApplicationController
   def new
     @plant = Plant.new
     @families = Family.all
-
     respond_to do |format|
       format.html # new.html.erb
       format.xml  { render :xml => @plant }
@@ -43,12 +42,12 @@ class PlantsController < ApplicationController
   # POST /plants.xml
   def create
     @plant = Plant.new(params[:plant])
-
     respond_to do |format|
       if @plant.save
         format.html { redirect_to(@plant, :notice => 'Plant was successfully created.') }
         format.xml  { render :xml => @plant, :status => :created, :location => @plant }
       else
+        @families = Family.all
         format.html { render :action => "new" }
         format.xml  { render :xml => @plant.errors, :status => :unprocessable_entity }
       end

@@ -18,7 +18,7 @@ class PlantsControllerTest < ActionController::TestCase
 
   test "should create plant without family" do
     assert_difference('Plant.count') do
-      post :create, :plant => {:name => "plant without family"}
+      post :create, :plant =>  {:name => "plant with family" ,:family_id => "1", :seed_from_month => "5", :seed_to_month => "6"}
     end
 
     assert_redirected_to plant_path(assigns(:plant))
@@ -26,7 +26,7 @@ class PlantsControllerTest < ActionController::TestCase
 
   test "should create plant with family" do
     assert_difference('Plant.count') do
-      post :create, :plant => {:name => "plant with family" ,:family_id => "1"}
+      post :create, :plant => {:name => "plant with family" ,:family_id => "1", :seed_from_month => "5", :seed_to_month => "6"}
     end
 
     assert_redirected_to plant_path(assigns(:plant))
