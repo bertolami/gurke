@@ -36,7 +36,12 @@ module WebratDriver
     click_link_within "div[id*=\""+to_html_tag(the_name)+"\"]", "Show"
   end
 
+   def click(the_name)
+    click_link_within "div[id*=\""+to_html_tag(the_name)+"\"]", the_name
+  end
+
   def rename_plant(original_name, new_name)
+    show_plant_details(original_name)
     click_edit  original_name
     fill_in "Name", :with => new_name
     click_button
@@ -57,7 +62,7 @@ module WebratDriver
 
   def show_plant_details(the_name)
     visit plants_path
-    click_show the_name
+    click the_name
   end
 
   def assign_to_other_family(plant_name, new_family_name)
