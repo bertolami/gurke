@@ -24,5 +24,5 @@ Then /^the estimated harvest time is "([^"]*)"$/ do |harvest_time|
   select @seed_time_month
   
   click_button "Berechnen"
-  pending # express the regexp above with the code you wish you had
+  response.should contain harvest_time
 end

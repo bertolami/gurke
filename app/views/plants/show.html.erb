@@ -28,18 +28,19 @@
     <%= render_variability_in_percent  @plant.variability_in_percent%>
   </p>
 
+  <% if(@plant.maturity_time_in_days) %>
+    <h2>Erntezeit berechnen</h2>
+    <p>Aussaatzeit </p>
+    <div id="plant.calculate_harvest_time">
+      <%= form_tag({:action => "calculate_harvest_time"}, {:method => "get"}) do %>
+        <%= select :harvest_time_calculation, :seed_day, %w{Anfang Mitte Ende} %>
+        <%= select :harvest_time_calculation, :seed_month, month %>
+        <%= submit_tag("Berechnen") %>
+      <% end %>
 
-  <h2>Erntezeit berechnen</h2>
-  <p>Aussaatzeit </p>
-  <div id="plant.calculate_harvest_time">
-    <%= form_tag({:action => "calculate_harvest_time"}, {:method => "get"}) do %>
-      <%= select :seed_day, :seed_day, %w{Anfang Mitte Ende} %>
-      <%= select :seed_month, :seed_month, month %>
-      <%= submit_tag("Berechnen") %>
-    <% end %>
-
-    <%= @harvest_time %>
-  </div>
+      <%= @harvest_time %>
+    </div>
+  <% end %>
 
 
   <%= link_to 'Edit', edit_plant_path(@plant) %> |

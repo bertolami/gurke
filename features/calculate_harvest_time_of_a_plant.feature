@@ -4,9 +4,13 @@ Feature: Calculate the harvest time of a given plant
   In order to plan the harvesting
 
   @wip
-  Scenario: Harvest a Rüebli seed in Mid April
-    When I ask for the harvest time of a "Rüebli" planted in "Mitte April"
-    And the "Rüebli" has an average maturity time of "3 Monate"
-    And a variation of "10%"
-    Then the estimated harvest time is "Anfang Juli bis Ende Juli"
-    
+  Scenario Outline: Harvest a Rüebli seed in Mid April
+    When I ask for the harvest time of a "<plant>" planted in "<seed_time>"
+    And the "<plant>" has an average maturity time of "<maturity_time>"
+    And a variation of "<variation>"
+    Then the estimated harvest time is "<harvest_time>"
+
+    Scenarios:
+      | plant      | seed_time   | maturity_time | variation | harvest_time               |
+      | Rüebli     | Mitte April | 3 Monate      | 10%       | Anfang Juli bis Ende Juli  |
+      | buschbohne | Anfang Mai  | 2 Monate      | 10%       | Ende Juni bis Anfang Juli |
