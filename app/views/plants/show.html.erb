@@ -1,8 +1,8 @@
 <p id="notice"><%= notice %></p>
 <div id="plant.<%= to_html_tag @plant.name %>">
-   <h1> <%= @plant.name %></h1>
+  <h1> <%= @plant.name %></h1>
 
- 
+
   <p>
     <b>Gattung</b>
     <%= @plant.family_name %>
@@ -15,32 +15,35 @@
 
   <p>
     <b>Aussaatzeit</b>
-     <%= render_seed_time(@plant)%>
+    <%= render_seed_time(@plant)%>
   </p>
 
-   <p>
+  <p>
     <b>Reifezeit</b>
-     <%= render_maturity_days(@plant.maturity_time_in_days)%>
+    <%= render_maturity_days(@plant.maturity_time_in_days)%>
   </p>
-  
-   <p>
+
+  <p>
     <b>Reifezeitungenauigkeit</b>
-     <%= render_variability_in_percent  @plant.variability_in_percent%>
+    <%= render_variability_in_percent  @plant.variability_in_percent%>
   </p>
+
 
   <h2>Erntezeit berechnen</h2>
-  <%= form_tag(:action => "calculate_harvest_time", :method => "get") do %>
-  <%= label_tag(:seed_day, "Aussaattag:") %>
-  <%= select :seed_day, :seed_day, %w{Anfang Mitte Ende} %>
-  <%= label_tag(:seed_month, "Aussaatmonat:") %>
-  <%= text_field_tag(:seed_month) %>
-  <%= submit_tag("Berechnen") %>
-  <% end %>
+  <p>Aussaatzeit </p>
+  <div id="plant.calculate_harvest_time">
+    <%= form_tag({:action => "calculate_harvest_time"}, {:method => "get"}) do %>
+      <%= select :seed_day, :seed_day, %w{Anfang Mitte Ende} %>
+      <%= select :seed_month, :seed_month, month %>
+      <%= submit_tag("Berechnen") %>
+    <% end %>
 
+    <%= @harvest_time %>
+  </div>
 
 
   <%= link_to 'Edit', edit_plant_path(@plant) %> |
-   <%= link_to 'Destroy', @plant, :confirm => 'Are you sure?', :method => :delete %> |
+  <%= link_to 'Destroy', @plant, :confirm => 'Are you sure?', :method => :delete %> |
   <%= link_to 'Back', plants_path %>
 
 </div>

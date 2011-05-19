@@ -1,8 +1,9 @@
 class PlantsController < ApplicationController
   # GET /calculate_harvest_time
   def calculate_harvest_time
-    puts "hallo"
-    redirect_to :action => "index"
+    @plant = Plant.find(params[:id])
+    @harvest_time = @plant.calculate_harvest_time(params[:seed_day], params[:seed_month])
+    render :action => "show"
   end
 
   # GET /plants

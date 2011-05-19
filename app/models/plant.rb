@@ -22,4 +22,8 @@ class Plant < ActiveRecord::Base
       ""
     end
   end
+
+  def calculate_average_harvest_time(date_in_year)
+
+  end
 end

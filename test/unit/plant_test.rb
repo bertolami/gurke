@@ -13,4 +13,10 @@ class PlantTest < ActiveSupport::TestCase
     plant.family = nil
     assert_equal "", plant.family_name
   end
+
+  test "calculate harvest time of ruebli" do
+    plant = plants(:ruebli)
+      average_harvest_time = plant.calculate_average_harvest_time(DateInYear(1,4))
+      assert_equal
+  end
 end
