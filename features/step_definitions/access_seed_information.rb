@@ -2,8 +2,7 @@
  
 
 When /^I display the details of "([^"]*)"$/ do |plant|
-  visit plants_path
-  click_show plant
+  show_plant_details plant
  
 end
 
