@@ -9,6 +9,7 @@ Feature: Homepage contains usefull information
     Then I see a link to the "<diplay_name>" that goes to "<target>"
 
     Scenarios:
-      | diplay_name      | target   |
-      | Pflanzen         | plants   |
-      | Pflanzenfamilien | families |
+      | diplay_name | target   |
+      | Pflanzen    | plants   |
+      | Gattungen   | families |
+      | Garten      | beds     |
