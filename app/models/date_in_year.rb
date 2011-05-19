@@ -3,10 +3,13 @@ class DateInYear
 
   def initialize(day, month )
     @day = day
-    @mont= month
+    @month= month
   end
 
-  def equal?(other)
-    other.day == @day && other.month == @month
+  def ==(other)
+    other != nil and other.class == self.class and other.day == @day and other.month == @month
+  end
+  def to_s
+    "#{@day}. #{@month}"
   end
 end
