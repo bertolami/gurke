@@ -4,7 +4,7 @@ def scan_to_a s
   res
 end
 
-Given /^a bed with name "([^"]*)" and field "([^"]*)"$/ do |name, field|
+Given /^A bed with name "([^"]*)" and field "([^"]*)"$/ do |name, field|
   @name = name
   create_new_bed(name, field)
 end

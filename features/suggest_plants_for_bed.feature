@@ -4,7 +4,7 @@ Feature: suggest plants for a bed
   then Gurke suggests a list of candidate plants
 
   Scenario Outline:
-    Given a bed with name "<name>" and field "<field>"
+    Given A bed with name "<name>" and field "<field>"
     When I ask Gurke for a plant to seed there
     Then Gurke suggests plants "<plants>"
 
