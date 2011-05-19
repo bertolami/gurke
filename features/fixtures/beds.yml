@@ -5,10 +5,17 @@
 # below each fixture, per the syntax in the comments below
 #
 one:
+  name: rechts
   field_state: A
+
 two:
+  name: links
   field_state: B
+
 three:
+  name: unten
   field_state: C
+
 four:
+  name: oben
   field_state: D

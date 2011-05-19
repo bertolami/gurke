@@ -3,8 +3,15 @@
 module ApplicationHelper
 
   def to_html_tag(string)
-    s = string.sub(/\s+/, "_").underscore
-    replace_umlaute(s)
+    if string
+      s = string.sub(/\s+/, "_").underscore
+      replace_umlaute(s)
+    else
+      a = "string_is_nil"
+      puts a
+      a
+    end
+
   end
 
   def replace_umlaute string

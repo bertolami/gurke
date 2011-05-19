@@ -1,4 +1,4 @@
-module WebratLayer
+module WebratDriver
   include ApplicationHelper
 
   def create_new_family(family, energy)
@@ -66,4 +66,29 @@ module WebratLayer
     select new_family_name
     click_button
   end
+
+  def create_new_bed(name, field_state)
+    visit new_bed_path
+    fill_in "bed_name", :with => name
+
+    select field_state, :from => "bed[field_state]"
+    click_button "bed_submit"
+  end
+
+  def find_bed(bed_name)
+    visit new_bed_path
+    fill_in "bed_name", :with => bed_name
+
+    select bed_field_state, :from => "bed[field_state]"
+    click_button "bed_submit"
+  end
+
+  def show_bed_details(the_name)
+    visit beds_path
+    click_show the_name
+  end
+
+
+
+
 end

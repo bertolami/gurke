@@ -9,17 +9,17 @@
     <th></th>
   </tr>
 
-<% @families.each do |family| %>
-  <div id="family.<%= to_html_tag family.name %>">
-  <tr>
-    <td><%= family.name %></td>
-    <td><%= family.energy %></td>
-    <td><%= link_to 'Show', family %></td>
-    <td><%= link_to 'Edit', edit_family_path(family) %></td>
-    <td><%= link_to 'Destroy', family, :confirm => 'Are you sure?', :method => :delete %></td>
-  </tr>
-  </div>
-<% end %>
+  <% @families.each do |family| %>
+    <div id="family.<%= to_html_tag family.name %>">
+      <tr>
+        <td><%= family.name %></td>
+        <td><%= family.energy %></td>
+        <td><%= link_to 'Show', family %></td>
+        <td><%= link_to 'Edit', edit_family_path(family) %></td>
+        <td><%= link_to 'Destroy', family, :confirm => 'Are you sure?', :method => :delete %></td>
+      </tr>
+    </div>
+  <% end %>
 </table>
 
 <br />
