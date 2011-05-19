@@ -10,7 +10,6 @@ Given /^A bed with name "([^"]*)" and field "([^"]*)"$/ do |name, field|
 end
 
 When /^I ask Gurke for a plant to seed there$/ do
-  puts "show bed details"
   @site_content = show_bed_details(@name)
 end
 
