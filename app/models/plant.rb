@@ -1,5 +1,8 @@
 class Plant < ActiveRecord::Base
   belongs_to :family
+  has_many :plants_of_beds
+  has_many :beds, :through => :plants_of_beds
+
   validates_uniqueness_of :name
   validates_presence_of :name
 

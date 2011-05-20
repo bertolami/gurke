@@ -10,8 +10,15 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20110519120939) do
+ActiveRecord::Schema.define(:version => 20110520044945) do
 
+  create_table "plants_of_beds", :force => true do |t|
+    t.integer  "plant_id"
+    t.integer  "bed_id"
+    t.float    "amount"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
   create_table "beds", :force => true do |t|
     t.datetime "created_at"
     t.datetime "updated_at"

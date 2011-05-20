@@ -25,6 +25,7 @@ class BedsController < ApplicationController
   def new
     @bed = Bed.new
     @possible_states = FieldState::all_states.collect{|state| [state.id, state.id]}
+
     respond_to do |format|
       format.html # new.html.erb
       format.xml  { render :xml => @bed }
@@ -35,7 +36,8 @@ class BedsController < ApplicationController
   def edit
     @bed = Bed.find(params[:id])
     @possible_states = FieldState::all_states.collect{|state| [state.id, state.id]}
-    @suggested_plants = @bed.suggest_plants.collect{|plant| [plant.id, plant.name]}
+    @suggested_plants = @bed.suggest_plants.collect{|plant| [plant.name, plant.id]}
+
   end
 
   # POST /beds
@@ -58,6 +60,7 @@ class BedsController < ApplicationController
   # PUT /beds/1.xml
   def update
     @bed = Bed.find(params[:id])
+    @suggested_plants = @bed.suggest_plants.collect{|plant| [plant.name, plant.id]}
 
     respond_to do |format|
       if @bed.update_attributes(params[:bed])

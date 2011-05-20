@@ -1,6 +1,19 @@
-<h1>Editing bed</h1>
+<h1>Pflanzen hinzufügen</h1>
 
-<%= render 'form' %>
+  <p>
+    <b>Name:</b>
+    <%= @bed.name%>
+  </p>
+  <p>
+    <b>Status:</b>
+    <%= @bed.field_state%>
+  </p>
+  <p>
+    <b>gewählte Planzen:</b>
+    <%= @bed.choosen_plants%>
+  </p>
+
+<%= render 'form_add_plants' %>
 
 <%= link_to 'Show', @bed %> |
 <%= link_to 'Back', beds_path %>

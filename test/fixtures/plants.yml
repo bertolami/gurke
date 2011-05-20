@@ -24,7 +24,7 @@ Kopfsalat:
 
 ruebli:
   name: Rüebli
-  family: koerbchenbluetler
+  family: doldenbluetler
   seed_from_month: 4
   seed_from_day: 1
   seed_to_month: 6

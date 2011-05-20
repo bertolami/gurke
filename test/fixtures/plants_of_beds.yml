@@ -1,0 +1,16 @@
+rechst_a_has_zwiebel:
+  bed: rechts_A
+  plant: Zwiebel
+
+rechst_a_has_ruebli:
+  bed: rechts_A
+  plant: ruebli
+
+
+links_b_has_kopfsalat:
+  bed: links_B
+  plant: Kopfsalat
+
+unten_c_has_randen:
+  bed: unten_C
+  plant: Randen
