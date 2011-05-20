@@ -60,6 +60,10 @@ class BedsController < ApplicationController
   # PUT /beds/1.xml
   def update
     @bed = Bed.find(params[:id])
+    plant_ids=params[:selected_plants][:plant_ids].collect { |s|s.to_i  }
+    puts plant_ids
+    @bed.plant_ids = @bed.plant_ids.concat plant_ids
+
     @possible_plants = @bed.possible_plants.collect{|plant| [plant.name, plant.id]}
 
     respond_to do |format|

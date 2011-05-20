@@ -12,7 +12,7 @@ class Bed < ActiveRecord::Base
     end
     candidates
   end
-
+  
   def to_s
     "#{name} - #{field_state} : possible_plants => #{possible_plants.join " "}"
   end

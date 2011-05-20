@@ -102,7 +102,7 @@ module WebratDriver
   def add_plants_to_bed(bed_name, plant_names)
     visit beds_path
     click_edit  bed_name
-    
+    select_multiple plant_names
     click_button
   end
 

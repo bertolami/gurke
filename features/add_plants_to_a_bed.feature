@@ -6,14 +6,11 @@ Feature: Add plants to a bed
 
 
   Scenario Outline: add some plants to bed
-    Given A bed with name "<name>" and field "<field>"
+    Given A bed with name "<name>" and field state "<field>"
     When I add "<plants>"
-    Then Gurke saves the bed
+    Then Gurke adds the plants to the bed
 
 
     Scenarios:
       | name  | field | plants         |
       | hallo | A     | Rüebli Zwiebel |
-      | hi    | B     | Kopfsalat      |
-      | this  | C     | Spinat Randen  |
-      | that  | D     | Kartoffel      |
