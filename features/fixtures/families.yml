@@ -29,3 +29,8 @@ doldenblütler:
   name: Doldenblütler
   energy: schwachzehrend
   field_state: A
+  
+schmetterlingsblütler:
+  name: Schmetterlingsblütler
+  energy: Schwachzehrer
+  field_state: B

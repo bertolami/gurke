@@ -39,6 +39,10 @@ class Plant < ActiveRecord::Base
     calculate_average_harvest_time_with_maturity_time(seed_date_in_year, self.maturity_time_in_days * 1.1)
   end
 
+  def seed_months
+    (seed_from_month .. seed_to_month).to_a
+  end
+
   private
 
   def calculate_average_harvest_time_with_maturity_time(seed_date_in_year, maturity_time)

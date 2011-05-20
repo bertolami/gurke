@@ -3,10 +3,22 @@ Feature: Calculate the harvest time of a given plant
   I want know when a plant that is seed at a given time can be harvest
   In order to plan the harvesting
 
-  @wip
-  Scenario: Harvest a Rüebli seed in Mid April
-    When I ask for the harvest time of a "Rüebli" planted in "Mitte April"
-    And the "Rüebli" has an average maturity time of "3 Monate"
-    And a variation of "10%"
-    Then the estimated harvest time is "Anfang Juli bis Ende Juli"
-    
+  Scenario Outline: Harvest a Rüebli seed in Mid April
+    When I ask for the harvest time of a "<plant>" planted in "<seed_time>"
+    And the "<plant>" has an average maturity time of "<maturity_time>"
+    And a variation of "<variation>"
+    Then the estimated harvest time is "<harvest_time>"
+
+    Scenarios:
+      | plant      | seed_time   | maturity_time | variation | harvest_time              |
+      | Rüebli     | Mitte April | 3 Monate      | 10%       | Anfang Juli bis Ende Juli |
+      | buschbohne | Anfang Mai  | 2 Monate      | 10%       | Ende Juni bis Anfang Juli |
+
+  Scenario: Allow only possible month for selection
+    When I want to calculate the harvest time for a "Rüebli"
+    Then only the months "April Mai Juni" can be selected but not e.g. "März Juli"
+   
+  Scenario: Keep seed time selected before calculation a Rüebli seed End of Mai
+    When I ask for the harvest time of a "Rüebli" planted in "Ende Mai"
+    Then the estimated harvest time is "Ende August bis Anfang September"
+    And the selected seed time stays at "Ende Mai"

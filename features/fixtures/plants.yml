@@ -39,3 +39,13 @@ Rucola:
 Kartoffel:
   name: Kartoffel
   family: raublattgewächse
+
+buschbohne:
+  name: Buschbohne
+  family: schmetterlingsblütler
+  seed_from_month: 4
+  seed_from_day: 1
+  seed_to_month: 6
+  seed_to_day: 1
+  maturity_time_in_days: 60
+  variability_in_percent: 10

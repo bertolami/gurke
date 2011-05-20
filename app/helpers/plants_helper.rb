@@ -21,6 +21,13 @@ module PlantsHelper
     (from == to) ? from : "#{from} bis #{to}"
   end
 
+  def render_harvest_time(date_in_year_from, date_in_year_to)
+    from = nice_time(date_in_year_from.month, date_in_year_from.day)
+    to = nice_time(date_in_year_to.month, date_in_year_to.day)
+    (from == to) ? from : "#{from} bis #{to}"
+  end
+
+
   def month_from_rendered_seed_time(seed_time_string)
     split =  seed_time_string.split(/\s+/)
     month = split.last
@@ -28,7 +35,7 @@ module PlantsHelper
   end
 
   def day_from_rendered_seed_time(seed_time_string)
-    split =  seed_time_string.split(/\s+/)
+    split =  seed_time_string.split /\s+/
     day = split.first
     if(day.to_i >0)
       day.to_i

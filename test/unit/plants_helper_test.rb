@@ -20,6 +20,13 @@ class PlantsHelperTest < ActiveSupport::TestCase
     assert_equal 1,  day_from_rendered_seed_time("Anfang Juni")
   end
 
+  test "Anfang parsed gives day 1" do
+    assert_equal 1,  day_from_rendered_seed_time("Anfang")
+  end
+  test "Mitte parsed gives day 15" do
+    assert_equal 15,  day_from_rendered_seed_time("Mitte")
+  end
+
 
   test "10. Juni parsed gives day 10" do
     assert_equal 10,  day_from_rendered_seed_time("10. Juni")

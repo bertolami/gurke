@@ -19,6 +19,9 @@ module ApplicationHelper
     string.gsub(/[ä]/, "ae").gsub(/[ö]/, "oe").gsub(/[ü]/, "ue")
   end
 
+  def render_months(month_array)
+    month_array.collect { |month_number| MONTH[month_number-1]  }
+  end
   def month
     MONTH
   end
