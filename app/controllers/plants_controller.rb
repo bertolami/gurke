@@ -3,9 +3,9 @@ class PlantsController < ApplicationController
   # GET /calculate_harvest_time
   def calculate_harvest_time
     @plant = Plant.find(params[:id])
-    seed_day = day_from_rendered_seed_time(params[:harvest_time_calculation][:seed_day])
-    seed_month = month_from_rendered_seed_time(params[:harvest_time_calculation][:seed_month])
-    seed_time = DateInYear.new(seed_day, seed_month)
+    @selected_seed_day = params[:harvest_time_calculation][:seed_day]
+    @selected_seed_month =  params[:harvest_time_calculation][:seed_month]
+    seed_time = DateInYear.new day_from_rendered_seed_time(@selected_seed_day),month_from_rendered_seed_time(@selected_seed_month)
     minimal_harvest_time = @plant.calculate_minimum_harvest_time seed_time
     maximal_harvest_time = @plant.calculate_maximum_harvest_time seed_time
     @harvest_time = render_harvest_time(minimal_harvest_time, maximal_harvest_time)

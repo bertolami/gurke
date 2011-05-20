@@ -13,7 +13,12 @@ Feature: Calculate the harvest time of a given plant
       | plant      | seed_time   | maturity_time | variation | harvest_time              |
       | Rüebli     | Mitte April | 3 Monate      | 10%       | Anfang Juli bis Ende Juli |
       | buschbohne | Anfang Mai  | 2 Monate      | 10%       | Ende Juni bis Anfang Juli |
-   @wip
+
   Scenario: Allow only possible month for selection
     When I want to calculate the harvest time for a "Rüebli"
     Then only the months "April Mai Juni" can be selected but not e.g. "März Juli"
+   
+  Scenario: Keep seed time selected before calculation a Rüebli seed End of Mai
+    When I ask for the harvest time of a "Rüebli" planted in "Ende Mai"
+    Then the estimated harvest time is "Ende August bis Anfang September"
+    And the selected seed time stays at "Ende Mai"

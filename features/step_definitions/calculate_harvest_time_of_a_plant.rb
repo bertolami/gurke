@@ -41,3 +41,11 @@ Then /^only the months "([^"]*)" can be selected but not e\.g\. "([^"]*)"$/ do |
   end
 end
 
+Then /^the selected seed time stays at "([^"]*)"$/ do |seed_time|
+  seed_day = seed_time.split(/\s+/).first
+  seed_month = seed_time.split(/\s+/).last
+  #option value="Ende" selected="selected">
+  response.should have_selector "option", :value => seed_day, :selected => 'selected'
+  response.should have_selector "option", :value => seed_month, :selected => 'selected'
+end
+
