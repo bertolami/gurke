@@ -95,7 +95,8 @@ module WebratDriver
 
   def edit_bed_details(the_name)
     visit beds_path
-    click_edit the_name
+    click the_name
+    click_link "Edit"
   end
 
 
