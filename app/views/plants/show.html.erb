@@ -30,9 +30,13 @@
 
   <% if(@plant.maturity_time_in_days) %>
     <h2>Erntezeit berechnen</h2>
+
+
+
+<div id="plant.calculate_harvest_time">
     <p>Aussaatzeit </p>
   
-    <div id="plant.calculate_harvest_time">
+    
       <%= form_tag({:action => "calculate_harvest_time"}, {:method => "get"}) do %>
         <%= select :harvest_time_calculation, :seed_day, %w{Anfang Mitte Ende} ,{:selected => @selected_seed_day} %>
         <%= select :harvest_time_calculation, :seed_month, render_months(@plant.seed_months), {:selected => @selected_seed_month} %>
@@ -42,6 +46,7 @@
       <%= @harvest_time %>
     </div>
   <% end %>
+
 
 
   <%= link_to 'Edit', edit_plant_path(@plant) %> |
