@@ -1,17 +1,19 @@
 <h1>Pflanzen hinzufügen</h1>
 
-  <p>
-    <b>Name:</b>
-    <%= @bed.name%>
-  </p>
-  <p>
-    <b>Status:</b>
-    <%= @bed.field_state%>
-  </p>
-  <p>
-    <b>gewählte Planzen:</b>
-    <%= @bed.choosen_plants%>
-  </p>
+<p>
+  <b>Name:</b>
+  <%= @bed.name%>
+</p>
+<p>
+  <b>Status:</b>
+  <%= @bed.field_state%>
+</p>
+<p>
+  <b>Gewählte Pflanzen:</b>
+  <% @bed.plants.each do |plant| %>
+    <%= plant.name %>
+  <%  end %>
+</p>
 
 <%= render 'form_add_plants' %>
 

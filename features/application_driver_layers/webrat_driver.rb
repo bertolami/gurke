@@ -93,6 +93,12 @@ module WebratDriver
     click_show the_name
   end
 
+  def edit_bed_details(the_name)
+    visit beds_path
+    click_edit the_name
+  end
+
+
   def add_plants_to_bed(bed_name, plant_names)
     visit beds_path
     click_edit  bed_name

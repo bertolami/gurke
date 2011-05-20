@@ -1,5 +1,5 @@
 @wip
-Feature: Manage add_plants_to_a_bed
+Feature: Add plants to a bed
   As a gardener
   I want to add suitable plants to a bed
   in order to get a big harvest

@@ -3,6 +3,7 @@ class Bed < ActiveRecord::Base
   has_many :plants, :through => :plants_of_beds #, :source => bed
 
   attr_accessor :choosen_plants
+
   def suggest_plants
 
     candidates = []

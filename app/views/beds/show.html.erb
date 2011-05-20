@@ -1,20 +1,19 @@
 <p id="notice"><%= notice %></p>
-  <p>
-    <b>name:</b>
-    <%= @bed.name%>
-  </p>
-  <p>
-    <b>state:</b>
-    <%= @bed.field_state%>
-  </p>
+<p>
+  <b>Name:</b>
+  <%= @bed.name%>
+</p>
+<p>
+  <b>Status:</b>
+  <%= @bed.field_state%>
+</p>
 
-  <p>
-    <b>Mögliche Pflanzen:</b>
-    <% @bed.suggest_plants.each do |plant| %>
-      <%= plant.name %>
-    <%  end %>
-  </p>
-
+<p>
+  <b>Gewählte Pflanzen:</b>
+  <% @bed.plants.each do |plant| %>
+    <%= plant.name %>
+  <%  end %>
+</p>
 
 <%= link_to 'Edit', edit_bed_path(@bed) %> |
 <%= link_to 'Back', beds_path %>
