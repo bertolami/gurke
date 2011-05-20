@@ -19,10 +19,25 @@ When /^a variation of "([^"]*)"/ do |variation|
 end
 
 Then /^the estimated harvest time is "([^"]*)"$/ do |harvest_time|
-  show_plant_details(@plant)
+  show_plant_details @plant
   select @seed_time_days
   select @seed_time_month
   
   click_button "Berechnen"
   response.should contain harvest_time
 end
+
+When /^I want to calculate the harvest time for a "([^"]*)"$/ do |plant|
+   @plant = plant
+end
+
+Then /^only the months "([^"]*)" can be selected but not e\.g\. "([^"]*)"$/ do |included_month, excluded_month|
+  show_plant_details @plant
+  included_month.split(/\s+/).each do |incl|
+    response.should contain incl
+  end
+  excluded_month.split(/\s+/).each do |excl|
+    response.should_not contain excl
+  end
+end
+

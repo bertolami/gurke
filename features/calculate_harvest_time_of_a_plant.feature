@@ -10,6 +10,10 @@ Feature: Calculate the harvest time of a given plant
     Then the estimated harvest time is "<harvest_time>"
 
     Scenarios:
-      | plant      | seed_time   | maturity_time | variation | harvest_time               |
-      | Rüebli     | Mitte April | 3 Monate      | 10%       | Anfang Juli bis Ende Juli  |
+      | plant      | seed_time   | maturity_time | variation | harvest_time              |
+      | Rüebli     | Mitte April | 3 Monate      | 10%       | Anfang Juli bis Ende Juli |
       | buschbohne | Anfang Mai  | 2 Monate      | 10%       | Ende Juni bis Anfang Juli |
+   @wip
+  Scenario: Allow only possible month for selection
+    When I want to calculate the harvest time for a "Rüebli"
+    Then only the months "April Mai Juni" can be selected but not e.g. "März Juli"
