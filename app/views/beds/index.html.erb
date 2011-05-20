@@ -2,11 +2,23 @@
 
 
 
-  <% @beds.each do |bed| %>
-    <div id="bed.<%= to_html_tag bed.name %>">
-        <p><%= link_to bed.name, bed %> - <%= bed.field_state %></p>
-     </div>
-  <% end %>
+<% @beds.each do |bed| %>
+
+  <div id="bed.<%= to_html_tag bed.name %>" style="width:100px; height:100px; border:1px solid #5E8E3E;">
+  <script type="text/javascript">
+      new Draggable('bed.<%= to_html_tag bed.name %>', { snap: [40, 40] });
+    </script>
+    <p><%= link_to bed.name, bed %> - <%= bed.field_state %></p>
+    <p>Pflanzen: </p>
+    <ul>
+      <% bed.plants.each do |plant| %>
+      <li>
+        <%= link_to plant, plant%>
+      </li>
+    <%end%>
+    </ul>
+  </div>
+<% end %>
 
 <br />
 
