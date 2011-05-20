@@ -1,27 +1,12 @@
 <h1>Garten</h1>
 
-<table>
-  <tr>
-    <th>Name</th>
-    <th>Status</th>
-    <th>Pflanzen</th>
-    <th></th>
-    <th></th>
-  </tr>
+
 
   <% @beds.each do |bed| %>
     <div id="bed.<%= to_html_tag bed.name %>">
-      <tr>
-        <td><%= bed.name %></td>
-        <td><%= bed.field_state %></td>
-        <td></td>
-        <td><%= link_to 'Show', bed %></td>
-        <td><%= link_to 'Edit', edit_bed_path(bed) %></td>
-        <td><%= link_to 'Destroy', bed, :confirm => 'Are you sure?', :method => :delete %></td>
-      </tr>
-    </div>
+        <p><%= link_to bed.name, bed %> - <%= bed.field_state %></p>
+     </div>
   <% end %>
-</table>
 
 <br />
 

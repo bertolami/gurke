@@ -26,7 +26,9 @@ class Plant < ActiveRecord::Base
     end
   end
 
-  
+  def to_s
+    name
+  end
 
   def calculate_average_harvest_time(seed_date_in_year)
     calculate_average_harvest_time_with_maturity_time(seed_date_in_year, self.maturity_time_in_days)

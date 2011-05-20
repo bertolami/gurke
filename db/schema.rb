@@ -10,15 +10,8 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20110520044945) do
+ActiveRecord::Schema.define(:version => 20110520082442) do
 
-  create_table "plants_of_beds", :force => true do |t|
-    t.integer  "plant_id"
-    t.integer  "bed_id"
-    t.float    "amount"
-    t.datetime "created_at"
-    t.datetime "updated_at"
-  end
   create_table "beds", :force => true do |t|
     t.datetime "created_at"
     t.datetime "updated_at"
@@ -45,6 +38,14 @@ ActiveRecord::Schema.define(:version => 20110520044945) do
     t.integer  "seed_to_day"
     t.integer  "maturity_time_in_days"
     t.integer  "variability_in_percent"
+  end
+
+  create_table "plants_of_beds", :force => true do |t|
+    t.integer  "plant_id"
+    t.integer  "bed_id"
+    t.float    "amount"
+    t.datetime "created_at"
+    t.datetime "updated_at"
   end
 
 end
