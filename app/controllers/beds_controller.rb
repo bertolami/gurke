@@ -36,7 +36,7 @@ class BedsController < ApplicationController
   def edit
     @bed = Bed.find(params[:id])
     @possible_states = FieldState::all_states.collect{|state| [state.id, state.id]}
-    @suggested_plants = @bed.suggest_plants.collect{|plant| [plant.name, plant.id]}
+    @possible_plants = @bed.possible_plants.collect{|plant| [plant.name, plant.id]}
 
   end
 
@@ -60,7 +60,7 @@ class BedsController < ApplicationController
   # PUT /beds/1.xml
   def update
     @bed = Bed.find(params[:id])
-    @suggested_plants = @bed.suggest_plants.collect{|plant| [plant.name, plant.id]}
+    @possible_plants = @bed.possible_plants.collect{|plant| [plant.name, plant.id]}
 
     respond_to do |format|
       if @bed.update_attributes(params[:bed])

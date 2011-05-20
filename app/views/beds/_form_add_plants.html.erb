@@ -15,7 +15,7 @@
   <div class="field">
     <%= f.label :possible_plants %><br />
     
-    <%= f.select(:plant_ids, options_for_select(@suggested_plants , 0),{}, {"multiple" => true, "size" => @suggested_plants.size}) %>
+    <%= f.select(:plant_ids, options_for_select(@possible_plants , 0),{}, {"multiple" => true, "size" => @possible_plants.size}) %>
   </div>
 
   <div class="actions">

@@ -14,7 +14,7 @@ When /^I ask Gurke for a plant to seed there$/ do
 end
 
 Then /^Gurke suggests plants "([^"]*)"$/ do |expected_plant_names|
-  #suggested_plant_names = @suggested_plants.collect { |plants| plants.name }
+  #suggested_plant_names = @possible_plants.collect { |plants| plants.name }
   #suggested_plant_names.should eq scan_to_a expected_plant_names
   #puts @site_content
   scan_to_a(expected_plant_names).each do |expected_plant_name|
