@@ -34,7 +34,7 @@
     <div id="plant.calculate_harvest_time">
       <%= form_tag({:action => "calculate_harvest_time"}, {:method => "get"}) do %>
         <%= select :harvest_time_calculation, :seed_day, %w{Anfang Mitte Ende} %>
-        <%= select :harvest_time_calculation, :seed_month, month %>
+        <%= select :harvest_time_calculation, :seed_month, render_months(@plant.seed_months) %>
         <%= submit_tag("Berechnen") %>
       <% end %>
 

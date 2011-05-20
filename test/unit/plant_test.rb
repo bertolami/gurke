@@ -30,4 +30,10 @@ class PlantTest < ActiveSupport::TestCase
     average_harvest_time = plant.calculate_maximum_harvest_time(DateInYear.new(1,4))
     assert_equal DateInYear.new(7,6), average_harvest_time
   end
+
+  test "test seed month of rüebli" do
+    plant = plants(:ruebli)
+    seed_months = plant.seed_months
+    assert_equal [4,5,6], seed_months
+  end
 end
