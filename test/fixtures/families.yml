@@ -4,18 +4,28 @@
 # model remove the '{}' from the fixture names and add the columns immediately
 # below each fixture, per the syntax in the comments below
 #
+
 liliengewaechse:
  name: Liliengewaechse
- energy: Schwachzehrer
+ energy: schwachzehrend
+ field_state: A
 
 koerbchenbluetler:
  name: Koerbchenbluetler
- energy: Schwachzehrer
+ energy: schwachzehrend
+ field_state: B
 
 gaensefussgewaechse:
  name: Gaensefussgewaechse
- energy: Starkzehrer
+ energy: starkzehrend
+ field_state: C
 
-raublattgewächse:
+raublattgewaechse:
   name: Raublattgewächse
-  energy: Schwachzehrer
+  energy: schwachzehrend
+  field_state: D
+
+doldenbluetler:
+  name: Doldenblütler
+  energy: schwachzehrend
+  field_state: A

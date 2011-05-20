@@ -4,18 +4,18 @@
 # model remove the '{}' from the fixture names and add the columns immediately
 # below each fixture, per the syntax in the comments below
 #
-one:
+rechts_A:
   name: rechts
   field_state: A
 
-two:
+links_B:
   name: links
   field_state: B
 
-three:
+unten_C:
   name: unten
   field_state: C
 
-four:
+oben_D:
   name: oben
   field_state: D
