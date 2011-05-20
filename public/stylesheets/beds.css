@@ -1,0 +1,20 @@
+/* 
+    Document   : beds
+    Created on : May 20, 2011, 12:05:34 PM
+    Author     : ubuntu
+    Description:
+        Purpose of the stylesheet follows.
+*/
+
+/* 
+   TODO customize this sample style
+   Syntax recommendation http://www.w3.org/TR/REC-CSS2/
+*/
+
+div[id*="bed_box"] {
+    padding: 5px;
+    margin: 10px;
+    width:150px;
+    border:2px solid #5E8E3E;
+}
+
